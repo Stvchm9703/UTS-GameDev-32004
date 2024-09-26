@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "**/*.meta": true
+    },
+    "omnisharp.useGlobalMono": false,
+    "omnisharp.autoStart": true,
+    "dotnet.defaultSolution": "UTS-GameDev-32004.sln"
+}
