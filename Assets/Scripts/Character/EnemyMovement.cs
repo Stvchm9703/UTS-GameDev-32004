@@ -25,7 +25,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     public EnemyState state = EnemyState.Normal;
 
-    private Vector3 basicScale, flipScale;
+    private Vector3 basicScale,
+        flipScale;
 
     public bool Arrived()
     {
@@ -44,8 +45,17 @@ public class EnemyMovement : MonoBehaviour
         if (tweener == null)
             tweener = gameObject.AddComponent<Tweener>();
 
-        basicScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        flipScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        basicScale = new Vector3(
+            transform.localScale.x,
+            transform.localScale.y,
+            transform.localScale.z
+        );
+        flipScale = new Vector3(
+            -transform.localScale.x,
+            transform.localScale.y,
+            transform.localScale.z
+        );
+        ChangeState(EnemyState.Normal);
     }
 
     // Update is called once per frame
@@ -67,6 +77,9 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            if (waypoints.Count == 0)
+                return;
+
             MoveToWaypoint(waypoints[currentWaypoint]);
         }
     }
@@ -91,22 +104,26 @@ public class EnemyMovement : MonoBehaviour
         ChangeState(EnemyState.Normal);
     }
 
-    void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         state = newState;
         switch (state)
         {
             case EnemyState.Normal:
-                animator.Play("Walk");
+                // animator.Play("Walk");
+                animator.SetTrigger("Start");
                 break;
             case EnemyState.Scared:
-                animator.Play("Scared");
+                animator.SetTrigger("Scare");
                 break;
             case EnemyState.Dead:
-                animator.Play("Dead");
+                // animator.Play("Dead");
+                animator.SetTrigger("Dead");
                 break;
             case EnemyState.Revive:
-                animator.Play("Revive");
+                // animator.Play("Revive");
+                animator.SetTrigger("Normal");
+
                 break;
         }
     }

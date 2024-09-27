@@ -12,6 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Tweener tweener;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip footstepSound,
+        eatSound,
+        dieSound;
+
     private Vector3 basicScale,
         flipScale;
 
@@ -75,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
         }
         animator.Play("Walk");
     }
-
 
     public void SetTargetWaypoint(Vector3 waypoint)
     {

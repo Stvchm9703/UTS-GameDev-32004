@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      redgrave-blue-type-default_0_0: 2074054984195790161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
