@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3969808131700443031}
   - component: {fileID: 4469816795187576550}
   - component: {fileID: 8871382837733478843}
+  - component: {fileID: 494753991133424482}
+  - component: {fileID: 61118760960298598}
   m_Layer: 0
   m_Name: GhostBlue
   m_TagString: Untagged
@@ -98,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 1254624325014455551}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c92360e0544b4a7da316cda0b884735, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8380d68cbdec4f1c82d5dad1315dceb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -156,3 +158,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &494753991133424482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254624325014455551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce0ec27d13404ca396b4bc667763323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  waypoints: []
+  currentWaypoint: 0
+  state: 0
+--- !u!114 &61118760960298598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254624325014455551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b83ed3f0244604bce995908cdd0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

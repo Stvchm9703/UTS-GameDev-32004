@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - waypoint-yellow
+  - waypoint-red
+  - waypoint-green
+  - waypoint-blue
   layers:
   - Default
   - TransparentFX

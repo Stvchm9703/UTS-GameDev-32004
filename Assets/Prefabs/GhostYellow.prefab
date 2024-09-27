@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3359047025240046754}
   - component: {fileID: 7851812288110829104}
   - component: {fileID: 2333356431403381005}
+  - component: {fileID: 2901299720209026229}
   m_Layer: 0
   m_Name: GhostYellow
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 8625353643602280776}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b883990e0a364680a6fcd8d01725d8a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 844da1d8f0ac845b394d8c2c74a753dd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -156,3 +157,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &2901299720209026229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625353643602280776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce0ec27d13404ca396b4bc667763323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  waypoints: []
+  currentWaypoint: 0
+  state: 0
