@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2936034079020005695}
   - component: {fileID: 2597642814136289010}
   - component: {fileID: 4182239175940746848}
+  - component: {fileID: -6047828859397832555}
   m_Layer: 0
   m_Name: PacStudent
   m_TagString: Untagged
@@ -109,3 +110,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6047828859397832555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995411827822264706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ec560c335484b198cd3e29aebefeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.2
+  targetWaypoints: {fileID: 0}

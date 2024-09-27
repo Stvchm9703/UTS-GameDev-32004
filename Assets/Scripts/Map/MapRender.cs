@@ -456,4 +456,10 @@ public class MapRender : MonoBehaviour
         tileInstance.flags = TileFlags.LockAll;
         return tileInstance;
     }
+
+    public Vector3 GetTilePosition(int x, int y)
+    {
+        return itemTilemap.GetCellCenterWorld(new Vector3Int(x, -y, 0));
+    }
+    
 }

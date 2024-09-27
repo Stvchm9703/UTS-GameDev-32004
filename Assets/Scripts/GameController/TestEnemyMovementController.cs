@@ -10,8 +10,7 @@ public class TestEnemyMovementController : MonoBehaviour
         GhostGreenPrefab,
         GhostBluePrefab;
 
-    [SerializeField]
-    private GameObject PlayerPrefab;
+
 
     [SerializeField]
     private GameObject waypoints;
@@ -20,7 +19,7 @@ public class TestEnemyMovementController : MonoBehaviour
     void Start()
     {
         // Instantiate the Player
-        var player = Instantiate(PlayerPrefab, new Vector3(0, 0, -1), Quaternion.identity);
+  
         GhostInit();
     }
 

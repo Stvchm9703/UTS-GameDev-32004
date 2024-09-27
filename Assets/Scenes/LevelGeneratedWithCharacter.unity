@@ -655,6 +655,7 @@ GameObject:
   - component: {fileID: 1563279260}
   - component: {fileID: 1563279259}
   - component: {fileID: 1563279261}
+  - component: {fileID: 1563279262}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -704,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a47c2f74d32a49bc9d324689e9b0207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints: []
   mapRender: {fileID: 1563279260}
 --- !u!114 &1563279260
 MonoBehaviour:
@@ -742,8 +744,20 @@ MonoBehaviour:
   GhostYellowPrefab: {fileID: 8625353643602280776, guid: 015ded77ab927474296d40386a817ef1, type: 3}
   GhostGreenPrefab: {fileID: 8286869767641421009, guid: 02185512bd16d4b708204b16e831e375, type: 3}
   GhostBluePrefab: {fileID: 1254624325014455551, guid: 81618d2c242a948529f492952a92a964, type: 3}
-  PlayerPrefab: {fileID: 8995411827822264706, guid: 64c8362cb1a0f4e89907b1de1c1b2afe, type: 3}
   waypoints: {fileID: 1917883193}
+--- !u!114 &1563279262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563279256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6290dc2f716a14a5da67cb7c87c7936d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerPrefab: {fileID: 8995411827822264706, guid: 64c8362cb1a0f4e89907b1de1c1b2afe, type: 3}
 --- !u!1 &1606994275
 GameObject:
   m_ObjectHideFlags: 0
