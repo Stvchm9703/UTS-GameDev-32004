@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: wall layer
+    uniqueID: 332180407
+    locked: 0
+  - name: floor layer
+    uniqueID: 3478068293
+    locked: 0
+  - name: item layer
+    uniqueID: 3599981953
+    locked: 0

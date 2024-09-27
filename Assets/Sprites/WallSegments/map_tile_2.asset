@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Textures-16_17
+  m_Name: map_tile_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1034892754, guid: fe9f1d83306054eeea15f98c6cf41b43, type: 3}
+  m_Sprite: {fileID: -1334046092761242549, guid: d94cd54e9f65848a3b4c16a767ca9900, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
