@@ -6,8 +6,6 @@ using UnityEngine.Tilemaps;
 
 public class MapRender : MonoBehaviour
 {
- 
-
     [SerializeField]
     private Sprite outsideCornerWallSprite; // the [1] tile.  default should be top left corner as outter area as the default direaction
 
@@ -116,24 +114,16 @@ public class MapRender : MonoBehaviour
         int right = x + 1 < levelMap.GetLength(1) ? levelMap[y, x + 1] : 0;
         int bottom = y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x] : 0;
 
-        int topL = x - 1 >= 0 && y - 1 >= 0 ? levelMap[y - 1, x - 1] : 0;
-        int topR = x + 1 < levelMap.GetLength(1) && y - 1 >= 0 ? levelMap[y - 1, x + 1] : 0;
-        int bottomL = x - 1 >= 0 && y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x - 1] : 0;
-        int bottomR =
-            x + 1 < levelMap.GetLength(1) && y + 1 < levelMap.GetLength(0)
-                ? levelMap[y + 1, x + 1]
-                : 0;
-
-        
-       
         if ((top == 1 || top == 2) && (left == 1 || left == 2))
         {
-            if (top == 1) return 3;
+            if (top == 1)
+                return 3;
             return 9;
         }
         else if ((top == 1 || top == 2) && (right == 1 || right == 2))
         {
-            if (top == 1) return 1;
+            if (top == 1)
+                return 1;
             return 7;
         }
         else if ((bottom == 1 || bottom == 2) && (left == 1 || left == 2))
@@ -257,10 +247,16 @@ public class MapRender : MonoBehaviour
         int right = x + 1 < levelMap.GetLength(1) ? levelMap[y, x + 1] : 0;
         int bottom = y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x] : 0;
 
+        // int topL = x - 1 >= 0 && y - 1 >= 0 ? levelMap[y - 1, x - 1] : 0;
+        // int topR = x + 1 < levelMap.GetLength(1) && y - 1 >= 0 ? levelMap[y - 1, x + 1] : 0;
+        // int bottomL = x - 1 >= 0 && y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x - 1] : 0;
+        // int bottomR =
+        //     x + 1 < levelMap.GetLength(1) && y + 1 < levelMap.GetLength(0)
+        //         ? levelMap[y + 1, x + 1]
+        //         : 0;
+
         if ((top == 3 || top == 4) && (left == 3 || left == 4))
         {
-            // bottom right corner
-            // if (top == 3) return 3;
             return 9;
         }
         else if ((top == 3 || top == 4) && (right == 3 || right == 4))
