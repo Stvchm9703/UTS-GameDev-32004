@@ -1,71 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MapGenerator : MonoBehaviour
+public class MapRender : MonoBehaviour
 {
-    private int[,] levelMap =
-    {
-        { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 7 },
-        { 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4 },
-        { 2, 5, 3, 4, 4, 3, 5, 3, 4, 4, 4, 3, 5, 4 },
-        { 2, 6, 4, 0, 0, 4, 5, 4, 0, 0, 0, 4, 5, 4 },
-        { 2, 5, 3, 4, 4, 3, 5, 3, 4, 4, 4, 3, 5, 3 },
-        { 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-        { 2, 5, 3, 4, 4, 3, 5, 3, 3, 5, 3, 4, 4, 4 },
-        { 2, 5, 3, 4, 4, 3, 5, 4, 4, 5, 3, 4, 4, 3 },
-        { 2, 5, 5, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 4 },
-        { 1, 2, 2, 2, 2, 1, 5, 4, 3, 4, 4, 3, 0, 4 },
-        { 0, 0, 0, 0, 0, 2, 5, 4, 3, 4, 4, 3, 0, 3 },
-        { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 3, 4, 4, 0 },
-        { 2, 2, 2, 2, 2, 1, 5, 3, 3, 0, 4, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 },
-    };
-
     [SerializeField]
     private Sprite outsideCornerWallSprite; // the [1] tile.  default should be top left corner as outter area as the default direaction
 
     [SerializeField]
-    private Sprite outsideFlattenWallSpriteX; // the [2]X tile.  default should be top as outter area as the default direaction
-
-    [SerializeField]
-    private Sprite outsideFlattenWallSpriteY; // the [2]Y tile.  default should be Left as outter area as the default direaction
+    private Sprite outsideFlattenWallSprite; // the [2] tile.  default should be Left as outter area as the default direaction
 
     [SerializeField]
     private Sprite insideCornerWallSprite; // the [3] tile.  default should be top left corner as inner area as the default direaction
 
     [SerializeField]
-    private Sprite insideFlattenWallSpriteX; // the [4]X tile.  default should be top as inner area as the default direaction
+    private Sprite insideFlattenWallSprite; // the [4] tile.  default should be top as inner area as the default direaction
 
     [SerializeField]
-    private Sprite insideFlattenWallSpriteY; // the [4]Y tile.  default should be Left as inner area as the default direaction
+    private Sprite normalPalletSprite; // the [5] tile.  the inner area as the default direaction
 
     [SerializeField]
-    private Sprite insideAreaSprite; // the [5] and [6] tile.  the inner area as the default direaction
+    private Sprite powerPalletSprite; // the [6] tile.  the inner area as the default direaction
 
-    // [5] for normal pallet, [6] for the power pallet
+    [SerializeField]
+    private Sprite AdaptiveCornerWallSprite;
 
     // the [7] tile.  the adjoint area as the default direaction
 
 
     [SerializeField]
-    private Tilemap tilemap;
-
-    [SerializeField]
-    private TilemapRenderer tileRenderer;
+    private Tilemap wallTilemap,
+        itemTilemap;
 
     // Sprite asset types
 
 
-    void Start()
-    {
-        GenerateMap();
-    }
 
     // generate the map based on the levelMap array
-    private void GenerateMap()
+    public void RenderMap(int[,] levelMap)
     {
         for (int y = 0; y < levelMap.GetLength(0); y++)
         {
@@ -75,34 +49,44 @@ public class MapGenerator : MonoBehaviour
 
                 Vector3Int tilePosition = new Vector3Int(x, -y, 0);
                 Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
-                
+
                 switch (tileType)
                 {
                     case 0:
                         break;
                     case 1:
-                        tileInstance = GetOutsideCornerWallTile(x, y);
+                        tileInstance = GetOutsideCornerWallTile(levelMap, x, y);
+                        wallTilemap.SetTile(tilePosition, tileInstance);
+
                         break;
                     case 2:
-                        tileInstance = GetOutsideWallTile(x, y);
+                        tileInstance = GetOutsideWallTile(levelMap, x, y);
+                        wallTilemap.SetTile(tilePosition, tileInstance);
+
                         break;
                     case 3:
-                        tileInstance = GetInsideCornerWallTile(x, y);
+                        tileInstance = GetInsideCornerWallTile(levelMap, x, y);
+                        wallTilemap.SetTile(tilePosition, tileInstance);
+
                         break;
                     case 4:
-                        tileInstance = GetInsideWallTile(x, y);
+                        tileInstance = GetInsideWallTile(levelMap, x, y);
+                        wallTilemap.SetTile(tilePosition, tileInstance);
+
                         break;
                     case 5:
-                        tileInstance.sprite = insideAreaSprite;
+                        tileInstance.sprite = normalPalletSprite;
+                        itemTilemap.SetTile(tilePosition, tileInstance);
                         break;
                     case 6:
-                        tileInstance.sprite = insideAreaSprite;
+                        tileInstance.sprite = powerPalletSprite;
+                        itemTilemap.SetTile(tilePosition, tileInstance);
                         break;
                     case 7:
-                        tileInstance.sprite = insideAreaSprite;
+                        tileInstance = GetAdaptiveCornerWallTile(levelMap, x, y);
+                        wallTilemap.SetTile(tilePosition, tileInstance);
                         break;
                 }
-                tilemap.SetTile(tilePosition, tileInstance);
             }
         }
     }
@@ -123,7 +107,7 @@ public class MapGenerator : MonoBehaviour
     // outside corner wall sprite
     // it only has 4 direction
     // check the top, left, right, bottom has 1 or 2
-    private int GetOutsideCornerWallDirection(int x, int y)
+    private int GetOutsideCornerWallDirection(int[,] levelMap, int x, int y)
     {
         int top = y - 1 >= 0 ? levelMap[y - 1, x] : 0;
         int left = x - 1 >= 0 ? levelMap[y, x - 1] : 0;
@@ -132,12 +116,14 @@ public class MapGenerator : MonoBehaviour
 
         if ((top == 1 || top == 2) && (left == 1 || left == 2))
         {
-            // bottom right corner
+            if (top == 1)
+                return 3;
             return 9;
         }
         else if ((top == 1 || top == 2) && (right == 1 || right == 2))
         {
-            // bottom left corner
+            if (top == 1)
+                return 1;
             return 7;
         }
         else if ((bottom == 1 || bottom == 2) && (left == 1 || left == 2))
@@ -153,13 +139,13 @@ public class MapGenerator : MonoBehaviour
         return 0;
     }
 
-    private Tile GetOutsideCornerWallTile(int x, int y)
+    private Tile GetOutsideCornerWallTile(int[,] levelMap, int x, int y)
     {
         Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
         tileInstance.flags = TileFlags.None;
         tileInstance.sprite = outsideCornerWallSprite;
 
-        var direaction = GetOutsideCornerWallDirection(x, y);
+        var direaction = GetOutsideCornerWallDirection(levelMap, x, y);
         switch (direaction)
         {
             case 1:
@@ -198,7 +184,7 @@ public class MapGenerator : MonoBehaviour
         return tileInstance;
     }
 
-    private int GetOutsideWallDirection(int x, int y)
+    private int GetOutsideWallDirection(int[,] levelMap, int x, int y)
     {
         int top = y - 1 >= 0 ? levelMap[y - 1, x] : 0;
         int left = x - 1 >= 0 ? levelMap[y, x - 1] : 0;
@@ -226,79 +212,81 @@ public class MapGenerator : MonoBehaviour
         return 0;
     }
 
-    private Tile GetOutsideWallTile(int x, int y)
+    private Tile GetOutsideWallTile(int[,] levelMap, int x, int y)
     {
         Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
         tileInstance.flags = TileFlags.None;
-        var direction = GetOutsideWallDirection(x, y);
-        if (direction == 2)
+        var direction = GetOutsideWallDirection(levelMap, x, y);
+        tileInstance.sprite = outsideFlattenWallSprite;
+        // if (direction == 2 || direction == -2 || direction == 8)
+        // {
+        //     // tileInstance.transform = Matrix4x4.TRS(
+        //     //     Vector3.zero,
+        //     //     Quaternion.Euler(0, 0, 0),
+        //     //     new Vector3(1, 1, 1)
+        //     // );
+        // }
+        if (direction == 4 || direction == 6 || direction == -1)
         {
-            tileInstance.sprite = outsideFlattenWallSpriteX;
+            tileInstance.sprite = outsideFlattenWallSprite;
             tileInstance.transform = Matrix4x4.TRS(
                 Vector3.zero,
-                Quaternion.Euler(0, 0, 0),
-                new Vector3(1, -1, 1)
+                Quaternion.Euler(0, 0, 90),
+                new Vector3(1, 1, 1)
             );
-        }
-        else if (direction == 4)
-        {
-            tileInstance.sprite = outsideFlattenWallSpriteY;
-            tileInstance.transform = Matrix4x4.TRS(
-                Vector3.zero,
-                Quaternion.Euler(0, 0, 0),
-                new Vector3(-1, 1, 1)
-            );
-        }
-        else if (direction == 6 || direction == -1)
-        {
-            tileInstance.sprite = outsideFlattenWallSpriteY;
-        }
-        else if (direction == 8 || direction == -2)
-        {
-            tileInstance.sprite = outsideFlattenWallSpriteX;
         }
 
         tileInstance.flags = TileFlags.LockAll;
         return tileInstance;
     }
 
-    private int GetInsideCornerWallDirection(int x, int y)
+    private int GetInsideCornerWallDirection(int[,] levelMap, int x, int y)
     {
         int top = y - 1 >= 0 ? levelMap[y - 1, x] : 0;
         int left = x - 1 >= 0 ? levelMap[y, x - 1] : 0;
         int right = x + 1 < levelMap.GetLength(1) ? levelMap[y, x + 1] : 0;
         int bottom = y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x] : 0;
 
+        // int topL = x - 1 >= 0 && y - 1 >= 0 ? levelMap[y - 1, x - 1] : 0;
+        // int topR = x + 1 < levelMap.GetLength(1) && y - 1 >= 0 ? levelMap[y - 1, x + 1] : 0;
+        // int bottomL = x - 1 >= 0 && y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x - 1] : 0;
+        // int bottomR =
+        //     x + 1 < levelMap.GetLength(1) && y + 1 < levelMap.GetLength(0)
+        //         ? levelMap[y + 1, x + 1]
+        //         : 0;
+
         if ((top == 3 || top == 4) && (left == 3 || left == 4))
         {
-            // bottom right corner
             return 9;
         }
         else if ((top == 3 || top == 4) && (right == 3 || right == 4))
         {
             // bottom left corner
+            // if (top == 3) return 1;
             return 7;
         }
         else if ((bottom == 3 || bottom == 4) && (left == 3 || left == 4))
         {
             // top right corner
+            // if (top == 3) return 1;
             return 3;
         }
         else if ((bottom == 3 || bottom == 4) && (right == 3 || right == 4))
         {
             // top left corner
+            // if (top == 3) return 3;
             return 1;
         }
         return 0;
     }
 
-    private Tile GetInsideCornerWallTile(int x, int y)
+    private Tile GetInsideCornerWallTile(int[,] levelMap, int x, int y)
     {
         Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
         tileInstance.flags = TileFlags.None;
         tileInstance.sprite = insideCornerWallSprite;
 
-        var direaction = GetInsideCornerWallDirection(x, y);
+        var direaction = GetInsideCornerWallDirection(levelMap, x, y);
         switch (direaction)
         {
             case 1:
@@ -337,7 +325,7 @@ public class MapGenerator : MonoBehaviour
         return tileInstance;
     }
 
-    private int GetInsideWallDirection(int x, int y)
+    private int GetInsideWallDirection(int[,] levelMap, int x, int y)
     {
         int top = y - 1 >= 0 ? levelMap[y - 1, x] : 0;
         int left = x - 1 >= 0 ? levelMap[y, x - 1] : 0;
@@ -370,43 +358,101 @@ public class MapGenerator : MonoBehaviour
         {
             return -2;
         }
-        Debug.Log("x: " + x + " y: " + y + " c:" + levelMap[y, x]);
-        Debug.Log("top: " + top + " left: " + left + " right: " + right + " bottom: " + bottom);
+
         return 0;
     }
 
-    private Tile GetInsideWallTile(int x, int y)
+    private Tile GetInsideWallTile(int[,] levelMap, int x, int y)
     {
         Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
         tileInstance.flags = TileFlags.None;
-        var direction = GetInsideWallDirection(x, y);
-        if (direction == 2 || direction == -2)
+        tileInstance.sprite = insideFlattenWallSprite;
+
+        var direction = GetInsideWallDirection(levelMap, x, y);
+        // if (direction == 2 || direction == -2 || direction == 8) { }
+        if (direction == 4 || direction == -1 || direction == 6)
         {
-            tileInstance.sprite = insideFlattenWallSpriteX;
-        }
-        else if (direction == 4 || direction == -1)
-        {
-            tileInstance.sprite = insideFlattenWallSpriteY;
-        }
-        else if (direction == 6)
-        {
-            tileInstance.sprite = insideFlattenWallSpriteY;
+            // tileInstance.sprite = insideFlattenWallSpriteY;
             tileInstance.transform = Matrix4x4.TRS(
                 Vector3.zero,
-                Quaternion.Euler(0, 0, 0),
-                new Vector3(-1, 1, 1)
-            );
-        }
-        else if (direction == 8)
-        {
-            tileInstance.sprite = insideFlattenWallSpriteX;
-            tileInstance.transform = Matrix4x4.TRS(
-                Vector3.zero,
-                Quaternion.Euler(0, 0, 0),
-                new Vector3(1, -1, 1)
+                Quaternion.Euler(0, 0, 90),
+                new Vector3(1, 1, 1)
             );
         }
 
+        tileInstance.flags = TileFlags.LockAll;
+        return tileInstance;
+    }
+
+    private int GetAdaptiveCornerWallDirection(int[,] levelMap, int x, int y)
+    {
+        int top = y - 1 >= 0 ? levelMap[y - 1, x] : 0;
+        int left = x - 1 >= 0 ? levelMap[y, x - 1] : 0;
+        int right = x + 1 < levelMap.GetLength(1) ? levelMap[y, x + 1] : 0;
+        int bottom = y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x] : 0;
+
+        // single wall as up , double wall as left
+
+        if ((top == 3 || top == 4) && (left == 1 || left == 2))
+        {
+            return 1;
+        }
+        else if ((top == 3 || top == 4) && (right == 1 || right == 2))
+        {
+            return 3;
+        }
+        else if ((bottom == 3 || bottom == 4) && (left == 1 || left == 2))
+        {
+            return 7;
+        }
+        else if ((bottom == 3 || bottom == 4) && (right == 1 || right == 2))
+        {
+            return 9;
+        }
+        return 0;
+    }
+
+    private Tile GetAdaptiveCornerWallTile(int[,] levelMap, int x, int y)
+    {
+        Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
+        tileInstance.flags = TileFlags.None;
+        tileInstance.sprite = AdaptiveCornerWallSprite;
+
+        var direaction = GetAdaptiveCornerWallDirection(levelMap, x, y);
+        switch (direaction)
+        {
+            case 1:
+                tileInstance.transform = Matrix4x4.TRS(
+                    Vector3.zero,
+                    Quaternion.Euler(0, 0, 0),
+                    new Vector3(1, -1, 1)
+                );
+                break;
+            case 3:
+                /// fixed
+                tileInstance.transform = Matrix4x4.TRS(
+                    Vector3.zero,
+                    Quaternion.Euler(0, 0, 0),
+                    new Vector3(-1, -1, 1)
+                );
+                break;
+            case 7:
+
+                tileInstance.transform = Matrix4x4.TRS(
+                    Vector3.zero,
+                    Quaternion.Euler(0, 0, 0),
+                    new Vector3(1, 1, 1)
+                );
+                break;
+            case 9:
+                /// fixed
+                tileInstance.transform = Matrix4x4.TRS(
+                    Vector3.zero,
+                    Quaternion.Euler(0, 0, 0),
+                    new Vector3(-1, 1, 1)
+                );
+                break;
+        }
         tileInstance.flags = TileFlags.LockAll;
         return tileInstance;
     }
