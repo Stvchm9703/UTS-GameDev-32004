@@ -164,8 +164,8 @@ TextureImporter:
       name: map_tile_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -185,7 +185,7 @@ TextureImporter:
       name: map_tile_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 32
         width: 32
         height: 32
@@ -206,7 +206,7 @@ TextureImporter:
       name: map_tile_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 32
         width: 32
         height: 32
@@ -227,8 +227,8 @@ TextureImporter:
       name: map_tile_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 64
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -248,7 +248,7 @@ TextureImporter:
       name: map_tile_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 0
         width: 32
         height: 32
@@ -269,7 +269,7 @@ TextureImporter:
       name: map_tile_7
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
         width: 32
         height: 32
@@ -282,6 +282,27 @@ TextureImporter:
       bones: []
       spriteID: 2b77e8fe383294cc7b43fff2639a2683
       internalID: -537994772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map_tile_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5fc748279964665bc9e09260414a16
+      internalID: -1553426215
       vertices: []
       indices: 
       edges: []
@@ -305,6 +326,7 @@ TextureImporter:
       map_tile_5: 1440030061
       map_tile_6: -1539383711
       map_tile_7: -537994772
+      map_tile_8: -1553426215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
