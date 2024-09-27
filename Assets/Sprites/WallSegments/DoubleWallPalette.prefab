@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2433508615105223988}
   - component: {fileID: 8004428598307436943}
   m_Layer: 0
-  m_Name: wallPalette
+  m_Name: DoubleWallPalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -113,9 +113,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 12953e10ef1f8479baffba6e479f3dec, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 63008b5cb241548f39bbde4951d8c54a, type: 2}
-  m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -644588099, guid: d371a0c2af83f4ca182a8eeed6f2aa7c, type: 3}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - m_RefCount: 2
     m_Data:
@@ -128,24 +126,6 @@ Tilemap:
       e12: 0
       e13: 0
       e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  - m_RefCount: 0
-    m_Data:
-      e00: -1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: -0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: -0
       e21: 0
       e22: 1
       e23: 0
@@ -231,7 +211,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &6581718096964016630
+--- !u!114 &3798747588968656561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
