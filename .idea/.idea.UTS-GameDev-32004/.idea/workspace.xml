@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbdd82fa-cf7a-4b48-b1cd-5123177d0b1f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelGenerated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelGenerated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/GUI/GUI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GUI/GUI.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/dead-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/idle/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/redgrave-blue-type-default_0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/redgrave-blue-type-default_0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/blue-type/scared-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/dead-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/idle/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/normal-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/green-type/scared-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/dead-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/idle/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/normal-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/red-type/scared-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/dead-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/idle/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/normal-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ghost/yellow-type/scared-move/30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/front.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/front.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/idle/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PacStudentNormal/walking/24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletNormal/Coin-7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletPower/Purple.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletPower/Purple.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/PelletPower/White.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/PelletPower/White.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature-start-scene" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48745e0aa46c41059ed4eb64e3011f0d1cb800/49/766a45e9/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48745e0aa46c41059ed4eb64e3011f0d1cb800/f7/4e6275f8/Time.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Scripts/InGameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Scripts/InGameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/GUI/GUI.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/GUI/GUI.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/Ghost/blue-type/dead-move/00.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/Ghost/blue-type/dead-move/00.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/Ghost/blue-type/redgrave-blue-type-default_0.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/Ghost/blue-type/redgrave-blue-type-default_0.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/Ghost/red-type/change-dead-to-normal.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PacStudentNormal/back.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PacStudentNormal/back.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletNormal/Coin-1.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletNormal/Coin-1.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletNormal/Coin-2.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletNormal/Coin-2.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletNormal/Coin-7.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletNormal/Coin-7.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletPower/Purple.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletPower/Purple.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletPower/White.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/stephencheng/git_src/unity/UTS-GameDev-32004/Assets/Sprites/PelletPower/White.png.meta" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ny9FTUaj6vY2SZ3x3cT5oS0fkh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Unity Editor.Attach to Unity Editor & Play.executor": "Debug",
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="386">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="386" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="386">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="386" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbdd82fa-cf7a-4b48-b1cd-5123177d0b1f" name="Changes" comment="" />
+      <created>1729934345670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729934345670</updated>
+      <workItem from="1729934346747" duration="21861000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

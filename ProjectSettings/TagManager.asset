@@ -50,3 +50,6 @@ TagManager:
   - name: item layer
     uniqueID: 3599981953
     locked: 0
+  - name: HUI layer
+    uniqueID: 839747391
+    locked: 0
