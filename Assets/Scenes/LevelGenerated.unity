@@ -498,6 +498,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7689f8566a2434bb48ef8cb40ac76e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GhostBluePrefab: {fileID: 1254624325014455551, guid: 81618d2c242a948529f492952a92a964, type: 3}
+  GhostGreenPrefab: {fileID: 8286869767641421009, guid: 02185512bd16d4b708204b16e831e375, type: 3}
+  GhostRedPrefab: {fileID: 283827130450531977, guid: 5c9191327135d4661b87b74500c63771, type: 3}
+  GhostYellowPrefab: {fileID: 8625353643602280776, guid: 015ded77ab927474296d40386a817ef1, type: 3}
+  mapTransform: {fileID: 1563279258}
 --- !u!1 &862330613
 GameObject:
   m_ObjectHideFlags: 0
