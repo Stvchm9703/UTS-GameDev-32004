@@ -28,10 +28,16 @@
       <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
+    <list default="true" id="cbdd82fa-cf7a-4b48-b1cd-5123177d0b1f" name="Changes" comment="snap" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
@@ -44,6 +50,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Stvchm9703"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Stvchm9703/UTS-GameDev-32004.git",
+    "accountId": "8579a9e1-8d9e-4a33-84bd-23ffb1f6c386"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48745e0aa46c41059ed4eb64e3011f0d1cb800/49/766a45e9/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48745e0aa46c41059ed4eb64e3011f0d1cb800/8c/fa5ce6f7/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,13 +82,32 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+      &quot;associatedIndex&quot;: 7
+    }</component>
+  <component name="ProjectId" id="2ny9FTUaj6vY2SZ3x3cT5oS0fkh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Unity Editor.Attach to Unity Editor & Play.executor": "Debug",
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "git-widget-placeholder": "feature-movement",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feature-in-game-ui-appearance",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="QodanaHighlightedReportService">
@@ -90,8 +127,9 @@
       <ReportDescription localRun="true" path="/private/var/folders/tp/59n9gy8153dbtg68mx8jmptm0000gn/T/qodana_output/qodana.sarif.json" reportGuid="a51704a3-bf98-4f69-887e-ec5c5765b29a" reportId="UTS-GameDev-32004/qodana/2024-10-28" />
     </option>
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/MacOS/Unity" />
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2023.2.18f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -107,6 +145,16 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="386">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -118,8 +166,19 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="should be here">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbdd82fa-cf7a-4b48-b1cd-5123177d0b1f" name="Changes" comment="" />
+      <created>1729934345670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729934345670</updated>
+      <workItem from="1729934346747" duration="21861000" />
+      <workItem from="1729967507370" duration="363000" />
+    </task>
+    <task id="LOCAL-00001" summary="snapshot update">
       <option name="closed" value="true" />
       <created>1729968002488</created>
       <option name="number" value="00001" />
@@ -127,11 +186,36 @@
       <option name="project" value="LOCAL" />
       <updated>1729968002488</updated>
     </task>
+    <task id="LOCAL-00002" summary="snap, should be updated">
+      <option name="closed" value="true" />
+      <created>1729967792596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729967792596</updated>
+    </task>
     <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00003" summary="snap">
+      <option name="closed" value="true" />
+      <created>1729967858296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729967858296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
       <map>
@@ -168,6 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
+                        <option value="development" />
                         <option value="feature-movement" />
                       </list>
                     </value>
@@ -181,6 +266,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="snapshot update" />
+    <MESSAGE value="snap, should be updated" />
+    <MESSAGE value="snap" />
+    <option name="LAST_COMMIT_MESSAGE" value="snap" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
     <MESSAGE value="should be here" />
     <option name="LAST_COMMIT_MESSAGE" value="should be here" />
   </component>
