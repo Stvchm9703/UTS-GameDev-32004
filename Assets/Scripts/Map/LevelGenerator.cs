@@ -1,24 +1,53 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
+// using System.Text.Json;
+using System.Linq;
+using System.Text;
+// using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
+using UnityEngine.Windows;
 
-[System.Serializable]
-public class Waypoint
+//
+[Serializable]
+public struct Waypoint
 {
-    public int[] coor;
-    public List<int> directions;
+    public int x, y;
     public Vector3 position;
-    public Waypoint Up,
-        Down,
-        Left,
-        Right;
+    public int gridType;
+    // public bool IsIntersection;
+    // public bool IsWayX, IsWayY;
 
-    public Waypoint(int row, int col, Vector3 position)
+    public Waypoint(int row, int col, int gridType, Vector3 position)
     {
-        this.coor = new int[2] { row, col };
+        this.x = col;
+        this.y = row;
+        this.gridType = gridType;
         this.position = position;
+        // this.IsIntersection = isIntersection;
+        // this.IsWayX = isWayX;
+        // this.IsWayY = isWayY;
     }
+
+    public bool IsWalkable()
+    {
+        return gridType == 5 || gridType == 6;
+    }
+
+    public override string ToString()
+    {
+        return string.Format("[{0}, {1}, {2}, {3}]", x, y, gridType, position.ToString());
+    }
+}
+
+public enum Direction
+{
+    Up,
+    Down,
+    Left,
+    Right
 }
 
 public class LevelGenerator : MonoBehaviour
@@ -42,30 +71,32 @@ public class LevelGenerator : MonoBehaviour
         { 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 },
     };
 
-    [SerializeField]
-    private List<Waypoint> waypoints = new List<Waypoint>();
+    // private int[,] debugMap ;
 
-    public List<Waypoint> Waypoints
-    {
-        get => waypoints;
-    }
+    [SerializeField]  public List<Waypoint> Waypoints {  get; private set; }
 
-    [SerializeField]
-    private MapRender mapRender;
+
+    [SerializeField] private MapRender mapRender;
+    
+    
 
     // Start is called before the first frame update
     void Awake()
     {
+        Waypoints = new List<Waypoint>();
         int[,] fullLevelMap = GenerateFullMap(levelMap);
         // PrintMap(fullLevelMap); // Optional: For Debugging
+
         if (mapRender != null)
         {
             mapRender.RenderMap(fullLevelMap);
         }
-        GenerateWaypoint(fullLevelMap);
 
+        // Debug.Log(waypoints);
         AdjustCamera(fullLevelMap);
+        GenerateWaypoint(fullLevelMap);
     }
+
 
     // Function to generate the full map with horizontal and vertical flipping
     int[,] GenerateFullMap(int[,] originalMap)
@@ -130,6 +161,7 @@ public class LevelGenerator : MonoBehaviour
                 flipped[row, cols - 1 - col] = map[row, col];
             }
         }
+
         return flipped;
     }
 
@@ -147,23 +179,27 @@ public class LevelGenerator : MonoBehaviour
                 flipped[rows - 2 - row, col] = map[row, col]; // Offset by -2 since we skip the bottom row
             }
         }
+
         return flipped;
     }
 
     // Optional: Debug function to print the full map
     void PrintMap(int[,] map)
     {
+        string line = "";
         int rows = map.GetLength(0);
         int cols = map.GetLength(1);
         for (int row = 0; row < rows; row++)
         {
-            string line = "";
             for (int col = 0; col < cols; col++)
             {
-                line += map[row, col] + " ";
+                line += map[row, col] + ",";
             }
-            Debug.Log(line);
+
+            line += "\n";
         }
+
+        File.WriteAllBytes(Application.streamingAssetsPath + "/map.txt", Encoding.UTF8.GetBytes(line));
     }
 
     void AdjustCamera(int[,] fullMap)
@@ -180,104 +216,49 @@ public class LevelGenerator : MonoBehaviour
     {
         for (int row = 0; row < fullMap.GetLength(0); row++)
         {
+            // the y-axis
             for (int col = 0; col < fullMap.GetLength(1); col++)
             {
-                if (fullMap[row, col] == 5 || fullMap[row, col] == 6 || fullMap[row, col] == 0)
-                {
-                    List<int> directions = IsWaypoint(col, row, fullMap);
-                    if (directions == null)
-                    {
-                        continue;
-                    }
-                    var position = mapRender.GetTilePosition(row, col);
-                    Waypoint waypoint = new Waypoint(row, col, position);
-                    waypoint.directions = directions;
-                    waypoints.Add(waypoint);
-                }
-            }
-        }
-
-        foreach (Waypoint waypoint in waypoints)
-        {
-            foreach (int direction in waypoint.directions)
-            {
-                switch (direction)
-                {
-                    case 2:
-                        waypoint.Up = GetWaypoint(waypoint.coor[0], waypoint.coor[1], 8);
-                        break;
-                    case 4:
-                        waypoint.Left = GetWaypoint(waypoint.coor[0], waypoint.coor[1], 6);
-                        break;
-                    case 6:
-                        waypoint.Right = GetWaypoint(waypoint.coor[0], waypoint.coor[1], 4);
-                        break;
-                    case 8:
-                        waypoint.Down = GetWaypoint(waypoint.coor[0], waypoint.coor[1], 2);
-                        break;
-                }
+                var position = mapRender.GetTilePosition(row, col);
+                Waypoint waypoint = new Waypoint(row, col, fullMap[row, col], position);
+                Waypoints.Add(waypoint);
             }
         }
     }
 
-    List<int> IsWaypoint(int x, int y, int[,] levelMap)
+    public Waypoint? TryGetWalkable(Waypoint currWp, Direction direction)
     {
-        int top = y - 1 >= 0 ? levelMap[y - 1, x] : -1;
-        int left = x - 1 >= 0 ? levelMap[y, x - 1] : -1;
-        int right = x + 1 < levelMap.GetLength(1) ? levelMap[y, x + 1] : -1;
-        int bottom = y + 1 < levelMap.GetLength(0) ? levelMap[y + 1, x] : -1;
-
-        // check self
-        if (!IsWalkable(levelMap[y, x]))
+        // Debug.Log("get command");
+        // Debug.Log($"r:{currWp.x} c:{currWp.y} d:{direction.ToString()}");
+        Waypoint? targetWp = null;
+        switch (direction)
         {
-            return null;
+            case Direction.Up:
+                // if (waypoints.Any(w => w.x == row && w.y == col-1) == false) return false;
+                targetWp = Waypoints.Find(w => w.x == currWp.x && w.y == currWp.y - 1);
+                if (targetWp == null) return null;
+                if (targetWp.Value.IsWalkable() == false) return null;
+                return targetWp;
+
+            case Direction.Down:
+                targetWp = Waypoints.Find(w => w.x == currWp.x && w.y == currWp.y + 1);
+                if (targetWp == null) return null;
+                if (targetWp?.IsWalkable() == false) return null;
+                return targetWp;
+
+            case Direction.Left:
+                targetWp = Waypoints.Find(w => w.x == currWp.x - 1 && w.y == currWp.y);
+                if (targetWp == null) return null;
+                if (targetWp?.IsWalkable() == false) return null;
+                return targetWp;
+
+            case Direction.Right:
+                targetWp = Waypoints.Find(w => w.x == currWp.x + 1 && w.y == currWp.y);
+                if (targetWp == null) return null;
+                if (targetWp?.IsWalkable() == false) return null;
+                return targetWp;
         }
-
-        // check is corner
-        if (
-            IsWalkable(top) && IsWalkable(left)
-            || IsWalkable(top) && IsWalkable(right)
-            || IsWalkable(bottom) && IsWalkable(left)
-            || IsWalkable(bottom) && IsWalkable(right)
-        )
-        {
-            List<int> wp = new List<int>();
-            if (IsWalkable(top))
-                wp.Add(2);
-            if (IsWalkable(left))
-                wp.Add(4);
-            if (IsWalkable(right))
-                wp.Add(6);
-            if (IsWalkable(bottom))
-                wp.Add(8);
-            return wp;
-        }
-
-        return null;
-    }
-
-    bool IsWalkable(int val)
-    {
-        return val == 5 || val == 6;
-    }
-
-    Waypoint GetWaypoint(int row, int col, int direction)
-    {
-        foreach (Waypoint waypoint in waypoints)
-        {
-            if (waypoint.directions.Contains(direction))
-            {
-                if (waypoint.coor[0] == row && (direction == 8 || direction == 2))
-                {
-                    return waypoint;
-                }
-                if (waypoint.coor[1] == col && (direction == 4 || direction == 6))
-                {
-                    return waypoint;
-                }
-            }
-        }
-
+        
         return null;
     }
 }

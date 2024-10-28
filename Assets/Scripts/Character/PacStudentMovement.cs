@@ -1,22 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PacStudentMovement : MonoBehaviour
 {
-    public float speed = 1.2f;
+    public float speed = 2.4f;
 
     // public List<Transform> waypoints = new List<Transform>();
     private Vector3 targetPosition;
 
     private Animator animator;
     private Tweener tweener;
-
-    [SerializeField]
     private AudioSource audioSource;
+    private ParticleSystem dustParticleSystem;
 
-    [SerializeField]
-    private AudioClip footstepSound,
+    [SerializeField] private AudioClip footstepSound,
         eatSound,
         dieSound;
 
@@ -25,18 +24,15 @@ public class PlayerMovement : MonoBehaviour
 
     public bool Arrived()
     {
-        if (targetPosition == null)
-        {
-            return true;
-        }
         var distance = Vector3.Distance(transform.position, targetPosition);
-        return distance < 0.1f;
+        return distance < 0.01f;
     }
 
     void Start()
     {
         animator = GetComponent<Animator>();
         tweener = GetComponent<Tweener>();
+        audioSource = GetComponent<AudioSource>();
         if (tweener == null)
             tweener = gameObject.AddComponent<Tweener>();
 
@@ -50,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale.y,
             transform.localScale.z
         );
+        var dust = this.transform.Find("DustSmoke");
+        dustParticleSystem = dust.GetComponent<ParticleSystem>();
+        dustParticleSystem.Stop();
     }
 
     // Update is called once per frame
@@ -63,16 +62,22 @@ public class PlayerMovement : MonoBehaviour
         if (Arrived())
         {
             animator.Play("Idle");
+            dustParticleSystem.Stop();
+            
         }
         else
         {
+            animator.Play("Walk");
+            animator.speed = 2f;
+            HandleFootstep();
             MoveToWaypoint(targetPosition);
+            dustParticleSystem.Play();
         }
     }
 
     void MoveToWaypoint(Vector3 position)
     {
-        tweener.AddTween(transform, transform.position, position, Time.time, speed);
+        transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * speed);
         if (transform.position.x < position.x)
         {
             transform.localScale = basicScale;
@@ -81,11 +86,36 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = flipScale;
         }
-        animator.Play("Walk");
     }
 
-    public void SetTargetWaypoint(Vector3 waypoint)
+
+    public void SetTargetPosition(Waypoint wp)
     {
-        targetPosition = waypoint;
+        targetPosition = wp.position;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Player entered");
+        Debug.Log(other.gameObject.name);
+        if (other.CompareTag("ghost"))
+        {
+        }
+        else if (other.CompareTag("item"))
+        {
+            audioSource.PlayOneShot(eatSound);
+        }
+    }
+
+
+    // audio handle
+    void HandleFootstep()
+    {
+        audioSource.PlayOneShot(footstepSound);
+    }
+
+    public void DeadTarget()
+    {
+        audioSource.PlayOneShot(dieSound);
     }
 }

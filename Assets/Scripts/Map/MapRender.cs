@@ -1,41 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class MapRender : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite outsideCornerWallSprite; // the [1] tile.  default should be top left corner as outter area as the default direaction
+    [SerializeField] private Sprite
+        outsideCornerWallSprite; // the [1] tile.  default should be top left corner as outter area as the default direaction
 
-    [SerializeField]
-    private Sprite outsideFlattenWallSprite; // the [2] tile.  default should be Left as outter area as the default direaction
+    [SerializeField] private Sprite
+        outsideFlattenWallSprite; // the [2] tile.  default should be Left as outter area as the default direaction
 
-    [SerializeField]
-    private Sprite insideCornerWallSprite; // the [3] tile.  default should be top left corner as inner area as the default direaction
+    [SerializeField] private Sprite
+        insideCornerWallSprite; // the [3] tile.  default should be top left corner as inner area as the default direaction
 
-    [SerializeField]
-    private Sprite insideFlattenWallSprite; // the [4] tile.  default should be top as inner area as the default direaction
+    [SerializeField] private Sprite
+        insideFlattenWallSprite; // the [4] tile.  default should be top as inner area as the default direaction
 
-    [SerializeField]
-    private Sprite normalPalletSprite; // the [5] tile.  the inner area as the default direaction
+    [SerializeField] private Sprite normalPalletSprite; // the [5] tile.  the inner area as the default direaction
 
-    [SerializeField]
-    private Sprite powerPalletSprite; // the [6] tile.  the inner area as the default direaction
+    [SerializeField] private Sprite powerPalletSprite; // the [6] tile.  the inner area as the default direaction
 
-    [SerializeField]
-    private Sprite AdaptiveCornerWallSprite;
+    [SerializeField] private Sprite AdaptiveCornerWallSprite;
 
     // the [7] tile.  the adjoint area as the default direaction
 
 
-    [SerializeField]
-    private Tilemap wallTilemap,
+    [SerializeField] private Tilemap wallTilemap,
         itemTilemap;
 
     // Sprite asset types
-
 
 
     // generate the map based on the levelMap array
@@ -48,6 +44,7 @@ public class MapRender : MonoBehaviour
                 int tileType = levelMap[y, x];
 
                 Vector3Int tilePosition = new Vector3Int(x, -y, 0);
+                // Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
                 Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
 
                 switch (tileType)
@@ -55,24 +52,16 @@ public class MapRender : MonoBehaviour
                     case 0:
                         break;
                     case 1:
-                        tileInstance = GetOutsideCornerWallTile(levelMap, x, y);
-                        wallTilemap.SetTile(tilePosition, tileInstance);
-
+                        wallTilemap.SetTile(tilePosition, GetOutsideCornerWallTile(levelMap, x, y));
                         break;
                     case 2:
-                        tileInstance = GetOutsideWallTile(levelMap, x, y);
-                        wallTilemap.SetTile(tilePosition, tileInstance);
-
+                        wallTilemap.SetTile(tilePosition, GetOutsideWallTile(levelMap, x, y));
                         break;
                     case 3:
-                        tileInstance = GetInsideCornerWallTile(levelMap, x, y);
-                        wallTilemap.SetTile(tilePosition, tileInstance);
-
+                        wallTilemap.SetTile(tilePosition, GetInsideCornerWallTile(levelMap, x, y));
                         break;
                     case 4:
-                        tileInstance = GetInsideWallTile(levelMap, x, y);
-                        wallTilemap.SetTile(tilePosition, tileInstance);
-
+                        wallTilemap.SetTile(tilePosition, GetInsideWallTile(levelMap, x, y));
                         break;
                     case 5:
                         tileInstance.sprite = normalPalletSprite;
@@ -83,8 +72,7 @@ public class MapRender : MonoBehaviour
                         itemTilemap.SetTile(tilePosition, tileInstance);
                         break;
                     case 7:
-                        tileInstance = GetAdaptiveCornerWallTile(levelMap, x, y);
-                        wallTilemap.SetTile(tilePosition, tileInstance);
+                        wallTilemap.SetTile(tilePosition, GetAdaptiveCornerWallTile(levelMap, x, y));
                         break;
                 }
             }
@@ -101,7 +89,6 @@ public class MapRender : MonoBehaviour
     // 7 for the bottom left corner
     // 8 for the bottom
     // 9 for the bottom right corner
-
 
 
     // outside corner wall sprite
@@ -136,6 +123,7 @@ public class MapRender : MonoBehaviour
             // top left corner
             return 1;
         }
+
         return 0;
     }
 
@@ -180,6 +168,7 @@ public class MapRender : MonoBehaviour
                 );
                 break;
         }
+
         tileInstance.flags = TileFlags.LockAll;
         return tileInstance;
     }
@@ -209,6 +198,7 @@ public class MapRender : MonoBehaviour
                 return 8;
             return -2;
         }
+
         return 0;
     }
 
@@ -277,6 +267,7 @@ public class MapRender : MonoBehaviour
             // if (top == 3) return 3;
             return 1;
         }
+
         return 0;
     }
 
@@ -321,6 +312,7 @@ public class MapRender : MonoBehaviour
                 );
                 break;
         }
+
         tileInstance.flags = TileFlags.LockAll;
         return tileInstance;
     }
@@ -409,6 +401,7 @@ public class MapRender : MonoBehaviour
         {
             return 9;
         }
+
         return 0;
     }
 
@@ -453,13 +446,33 @@ public class MapRender : MonoBehaviour
                 );
                 break;
         }
+
         tileInstance.flags = TileFlags.LockAll;
         return tileInstance;
     }
 
-    public Vector3 GetTilePosition(int x, int y)
+    public Vector3 GetTilePosition(int mapDataX, int mapDataY)
     {
-        return itemTilemap.GetCellCenterWorld(new Vector3Int(x, -y, 0));
+        return itemTilemap.GetCellCenterWorld(new Vector3Int(mapDataY, -mapDataX, 0));
     }
-    
+
+    public void AddItemTile(int mapDataX, int mapDataY, int gridType)
+    {
+        Tile tileInstance = (Tile)ScriptableObject.CreateInstance(typeof(Tile));
+        if (gridType == 5)
+        {
+            tileInstance.sprite = normalPalletSprite;
+            itemTilemap.SetTile(new Vector3Int(mapDataX, -mapDataY), tileInstance);
+        }
+        else if (gridType == 6)
+        {
+            tileInstance.sprite = powerPalletSprite;
+            itemTilemap.SetTile(new Vector3Int(mapDataX, -mapDataY), tileInstance);
+        }
+    }
+
+    public void RemoveItemTile(int mapDataX, int mapDataY)
+    {
+        itemTilemap.SetTile(new Vector3Int(mapDataX, -mapDataY, 0), null);
+    }
 }
