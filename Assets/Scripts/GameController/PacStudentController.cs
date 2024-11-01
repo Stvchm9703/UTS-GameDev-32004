@@ -14,29 +14,40 @@ public class PacStudentController : MonoBehaviour
     private GameObject player = null;
     private PacStudentMovement _pacStudentMovement = null;
 
-    private LevelGenerator levelGenerator;
+    [SerializeField] private LevelGenerator levelGenerator;
     private Waypoint currentWaypoint, lastWaypoint;
 
-    private Direction? currentInput, lastInput; // 0: up , 1: 
+    private Direction? currentInput, lastInput;
+
     // Start is called before the first frame update
     private float fixedTimeUpdate = 2f;
     private float currentTime = 2f;
 
     private List<List<Direction>> directionBuffer = new List<List<Direction>>();
-    
+
 
     [SerializeField] private GameObject commandGameObject;
     private List<TextMeshProUGUI> commandTexts = new List<TextMeshProUGUI>();
 
+    void Awake()
+    {
+        player = Instantiate(PlayerPrefab, currentWaypoint.position, Quaternion.identity);
+        _pacStudentMovement = player.GetComponent<PacStudentMovement>();
+    }
+
     void Start()
     {
-        levelGenerator = GetComponent<LevelGenerator>();
+        if (levelGenerator == null)
+        {
+            var grid = GameObject.Find("Grid");
+            levelGenerator = grid.GetComponent<LevelGenerator>();
+        }
+
         currentWaypoint = levelGenerator.Waypoints.First(wp => wp.IsWalkable());
         Debug.Log(currentWaypoint);
         // Instantiate the Player
-        player = Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
-        _pacStudentMovement = player.GetComponent<PacStudentMovement>();
-        // _pacStudentMovement.SetTargetWaypoint(currentWaypoint);
+
+        _pacStudentMovement.SetTargetPosition(currentWaypoint);
         InitDebugCommand();
     }
 
@@ -45,7 +56,6 @@ public class PacStudentController : MonoBehaviour
     {
         HandleKeyPressed();
         HandleMovement();
-
     }
 
     void LateUpdate()
@@ -117,9 +127,10 @@ public class PacStudentController : MonoBehaviour
             currentInput = null;
             return;
         }
-        currentTime += Time.fixedDeltaTime;  
-        if(_pacStudentMovement.Arrived() == false) return;
-        if(currentInput == null) return;
+
+        currentTime += Time.fixedDeltaTime;
+        if (_pacStudentMovement.Arrived() == false) return;
+        if (currentInput == null) return;
         var wp = levelGenerator.TryGetWalkable(currentWaypoint, currentInput.Value);
         if (wp != null)
         {
@@ -143,6 +154,7 @@ public class PacStudentController : MonoBehaviour
                 lastInput = currentInput;
                 currentInput = diff[0];
             }
+
             // Debug.Log($"lastInput: {(int)lastInput.Value} currentInput: {(int)currentInput.Value}");
             return;
         }
@@ -151,10 +163,9 @@ public class PacStudentController : MonoBehaviour
         {
             var tmp = directionBuffer[0];
             if (tmp.Count == 0) return;
-            
+
             currentInput = tmp.Last();
         }
-        
     }
 
 

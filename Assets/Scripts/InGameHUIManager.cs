@@ -43,7 +43,7 @@ public class InGameHUIManager : MonoBehaviour
     public void RemoveLife()
     {
         life -= 1;
-        var lastCherry = lifeCherry[life];
+        var lastCherry = lifeCherry[^1];
         lastCherry.SetActive(false);
     }
 
@@ -63,7 +63,7 @@ public class InGameHUIManager : MonoBehaviour
             timeSpan.Milliseconds / 10);
     }
 
-    public void StartGhost(float seconds)
+    public void StartScareTime(float seconds)
     {
         _ghostTimer = seconds;
         ghostTimerGameObj.SetActive(true);
@@ -82,6 +82,11 @@ public class InGameHUIManager : MonoBehaviour
         {
             ghostTimerGameObj.SetActive(false);
         }
+    }
+    
+    public void ShowGameOver()
+    {
+        // show game over
     }
     
 }

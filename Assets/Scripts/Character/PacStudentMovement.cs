@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PacStudentMovement : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PacStudentMovement : MonoBehaviour
     private Vector3 basicScale,
         flipScale;
 
+    public UnityEvent<GameObject> EmmitOnItemHit;
+    public UnityEvent<GameObject> EmmitOnGhostHit;
     public bool Arrived()
     {
         var distance = Vector3.Distance(transform.position, targetPosition);
@@ -63,7 +66,6 @@ public class PacStudentMovement : MonoBehaviour
         {
             animator.Play("Idle");
             dustParticleSystem.Stop();
-            
         }
         else
         {
@@ -93,17 +95,22 @@ public class PacStudentMovement : MonoBehaviour
     {
         targetPosition = wp.position;
     }
+    
+    public void ResetPosition()
+    {
+        // transform.position = targetPosition;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Player entered");
-        Debug.Log(other.gameObject.name);
         if (other.CompareTag("ghost"))
         {
+            EmmitOnGhostHit.Invoke(other.gameObject);
         }
         else if (other.CompareTag("item"))
         {
             audioSource.PlayOneShot(eatSound);
+            EmmitOnItemHit.Invoke(other.gameObject);
         }
     }
 

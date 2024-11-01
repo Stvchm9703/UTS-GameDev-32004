@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4469816795187576550}
   - component: {fileID: 8871382837733478843}
   - component: {fileID: 91595434881658090}
+  - component: {fileID: 8333259197170140730}
   m_Layer: 0
   m_Name: GhostBlue
   m_TagString: ghsot
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1542384083
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: -6184050716912831369, guid: ce75eaf0af1e14b65a31a9db5f3fd9ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,7 +157,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 3.5, y: 3.5}
   m_EdgeRadius: 0
 --- !u!114 &91595434881658090
 MonoBehaviour:
@@ -170,6 +171,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dea8e664654144189ce12801352e320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8333259197170140730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254624325014455551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce0ec27d13404ca396b4bc667763323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  waypoints: []
+  currentWaypoint: 0
+  state: 0
 --- !u!1 &4107776347921642529
 GameObject:
   m_ObjectHideFlags: 0

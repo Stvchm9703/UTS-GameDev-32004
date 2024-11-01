@@ -14,13 +14,16 @@ public enum EnemyState
 public class EnemyMovement : MonoBehaviour
 {
     public float speed = 1.0f;
+    
     public List<Transform> waypoints = new List<Transform>();
+    [SerializeField]
+    private int currentWaypoint = 0;
+
+    public Vector3 revivePosition;
 
     private Animator animator;
     private Tweener tweener;
 
-    [SerializeField]
-    private int currentWaypoint = 0;
 
     [SerializeField]
     public EnemyState state = EnemyState.Normal;
@@ -35,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
             return false;
         }
         var distance = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
-        return distance < 0.1f;
+        return distance < 0.05f;
     }
 
     void Start()
@@ -126,5 +129,10 @@ public class EnemyMovement : MonoBehaviour
 
                 break;
         }
+    }
+
+    public void ResetPosition()
+    {
+        
     }
 }

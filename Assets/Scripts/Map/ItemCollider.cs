@@ -6,7 +6,7 @@ public class ItemCollider : MonoBehaviour
 {
     // BoxCollider2D boxCollider;
     public Waypoint waypoint { get; private set; }
-
+    
     public int itemType
     {
         get => waypoint.gridType;
@@ -17,7 +17,8 @@ public class ItemCollider : MonoBehaviour
 
     void Start()
     {
-        this.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        this.gameObject.tag = "item";
+        // this.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         // this.gameObject.layer = LayerMask.NameToLayer("Item");
         var rigidBody = this.AddComponent<Rigidbody2D>();
         rigidBody.isKinematic = false;

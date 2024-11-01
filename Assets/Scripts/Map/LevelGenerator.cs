@@ -16,6 +16,7 @@ public struct Waypoint
 {
     public int x, y;
     public Vector3 position;
+
     public int gridType;
     // public bool IsIntersection;
     // public bool IsWayX, IsWayY;
@@ -33,7 +34,7 @@ public struct Waypoint
 
     public bool IsWalkable()
     {
-        return gridType == 5 || gridType == 6;
+        return gridType == 5 || gridType == 6 || gridType == 0;
     }
 
     public override string ToString()
@@ -52,7 +53,7 @@ public enum Direction
 
 public class LevelGenerator : MonoBehaviour
 {
-    private int[,] levelMap =
+    private readonly int[,] levelMap =
     {
         { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 7 },
         { 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4 },
@@ -68,29 +69,25 @@ public class LevelGenerator : MonoBehaviour
         { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 0, 0, 0, 0 },
         { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 3, 4, 4, 0 },
         { 2, 2, 2, 2, 2, 1, 5, 3, 3, 0, 4, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 },
+        { 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 }
     };
 
     // private int[,] debugMap ;
 
-    [SerializeField]  public List<Waypoint> Waypoints {  get; private set; }
+    [SerializeField] public List<Waypoint> Waypoints { get; private set; }
 
 
     [SerializeField] private MapRender mapRender;
-    
-    
+
 
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         Waypoints = new List<Waypoint>();
-        int[,] fullLevelMap = GenerateFullMap(levelMap);
+        var fullLevelMap = GenerateFullMap(levelMap);
         // PrintMap(fullLevelMap); // Optional: For Debugging
 
-        if (mapRender != null)
-        {
-            mapRender.RenderMap(fullLevelMap);
-        }
+        if (mapRender != null) mapRender.RenderMap(fullLevelMap);
 
         // Debug.Log(waypoints);
         AdjustCamera(fullLevelMap);
@@ -99,37 +96,60 @@ public class LevelGenerator : MonoBehaviour
 
 
     // Function to generate the full map with horizontal and vertical flipping
-    int[,] GenerateFullMap(int[,] originalMap)
+    private int[,] GenerateFullMap(int[,] originalMap)
     {
-        int rows = originalMap.GetLength(0);
-        int cols = originalMap.GetLength(1);
+        var rows = originalMap.GetLength(0);
+        var cols = originalMap.GetLength(1);
 
         // Remove the bottom row for vertical mirroring
-        int trimmedRows = rows - 1;
+        // var trimmedRows = rows - 1;
 
         // Full map size will be 2x the original in both dimensions (mirroring horizontally and vertically)
-        int[,] fullMap = new int[trimmedRows * 2, cols * 2];
+        var fullMap = new int[rows * 2, cols * 2];
 
         // Copy original to top-left quadrant
         CopyMapSection(originalMap, fullMap, 0, 0, rows, cols);
 
         // Create and copy horizontally mirrored version to top-right quadrant
-        int[,] hMirrored = FlipHorizontally(originalMap);
+        var hMirrored = FlipHorizontally(originalMap);
         CopyMapSection(hMirrored, fullMap, 0, cols, rows, cols);
 
         // Create and copy vertically mirrored version to bottom-left quadrant
-        int[,] vMirrored = FlipVertically(originalMap);
-        CopyMapSection(vMirrored, fullMap, trimmedRows, 0, trimmedRows, cols);
+        var vMirrored = FlipVertically(originalMap);
+        CopyMapSection(vMirrored, fullMap, rows, 0, rows, cols);
 
         // Create and copy both horizontally and vertically mirrored to bottom-right quadrant
-        int[,] hvMirrored = FlipHorizontally(vMirrored);
-        CopyMapSection(hvMirrored, fullMap, trimmedRows, cols, trimmedRows, cols);
+        var hvMirrored = FlipHorizontally(vMirrored);
+        CopyMapSection(hvMirrored, fullMap, rows, cols, rows, cols);
 
-        return fullMap;
+
+        // Create a new array with one less element
+        int[,] newArray = new int[rows * 2 - 1, cols * 2];
+        // Copy rows before the middle row
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < cols * 2; col++)
+            {
+                newArray[row, col] = fullMap[row, col];
+            }
+        }
+
+        // Copy rows after the middle row
+        for (int i = rows + 1; i < rows * 2; i++)
+        {
+            for (int col = 0; col < cols * 2; col++)
+            {
+                newArray[i - 1, col] = fullMap[i, col];
+            }
+        }
+
+        newArray[rows, 0] = 9;
+
+        return newArray;
     }
 
     // Function to copy a section of one map into another at a specified location
-    void CopyMapSection(
+    private void CopyMapSection(
         int[,] source,
         int[,] destination,
         int destRow,
@@ -138,47 +158,35 @@ public class LevelGenerator : MonoBehaviour
         int numCols
     )
     {
-        for (int row = 0; row < numRows; row++)
-        {
-            for (int col = 0; col < numCols; col++)
-            {
-                destination[destRow + row, destCol + col] = source[row, col];
-            }
-        }
+        for (var row = 0; row < numRows; row++)
+        for (var col = 0; col < numCols; col++)
+            destination[destRow + row, destCol + col] = source[row, col];
     }
 
     // Flip the map horizontally (mirroring across the vertical axis)
-    int[,] FlipHorizontally(int[,] map)
+    private int[,] FlipHorizontally(int[,] map)
     {
-        int rows = map.GetLength(0);
-        int cols = map.GetLength(1);
-        int[,] flipped = new int[rows, cols];
+        var rows = map.GetLength(0);
+        var cols = map.GetLength(1);
+        var flipped = new int[rows, cols];
 
-        for (int row = 0; row < rows; row++)
-        {
-            for (int col = 0; col < cols; col++)
-            {
-                flipped[row, cols - 1 - col] = map[row, col];
-            }
-        }
+        for (var row = 0; row < rows; row++)
+        for (var col = 0; col < cols; col++)
+            flipped[row, cols - 1 - col] = map[row, col];
 
         return flipped;
     }
 
     // Flip the map vertically (mirroring across the horizontal axis)
-    int[,] FlipVertically(int[,] map)
+    private int[,] FlipVertically(int[,] map)
     {
-        int rows = map.GetLength(0);
-        int cols = map.GetLength(1);
-        int[,] flipped = new int[rows - 1, cols]; // Removing the bottom row as specified
+        var rows = map.GetLength(0);
+        var cols = map.GetLength(1);
+        var flipped = new int[rows, cols]; // Removing the bottom row as specified
 
-        for (int row = 0; row < rows - 1; row++) // Skip bottom row
-        {
-            for (int col = 0; col < cols; col++)
-            {
-                flipped[rows - 2 - row, col] = map[row, col]; // Offset by -2 since we skip the bottom row
-            }
-        }
+        for (var row = 0; row < rows; row++) // Skip bottom row
+        for (var col = 0; col < cols; col++)
+            flipped[rows - 1 - row, col] = map[row, col]; // Offset by -2 since we skip the bottom row
 
         return flipped;
     }
@@ -258,7 +266,7 @@ public class LevelGenerator : MonoBehaviour
                 if (targetWp?.IsWalkable() == false) return null;
                 return targetWp;
         }
-        
+
         return null;
     }
 }
