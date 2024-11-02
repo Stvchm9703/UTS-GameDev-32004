@@ -1,44 +1,33 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class ItemCollider : MonoBehaviour
 {
     // BoxCollider2D boxCollider;
-    public Waypoint waypoint { get; private set; }
-    
+    public Waypoint waypoint;
+    public UnityEvent<ItemCollider, GameObject> emmitItemHitEvent = new UnityEvent<ItemCollider, GameObject>();
+
     public int itemType
     {
         get => waypoint.gridType;
     }
 
-    // public int itemType = 0;
-    public CherryController cherryController;
-
     void Start()
     {
         this.gameObject.tag = "item";
-        // this.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-        // this.gameObject.layer = LayerMask.NameToLayer("Item");
         var rigidBody = this.AddComponent<Rigidbody2D>();
         rigidBody.isKinematic = false;
-        // rigidBody.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
         rigidBody.gravityScale = 0;
         rigidBody.useAutoMass = false;
         rigidBody.bodyType = RigidbodyType2D.Static;
-        
-        var  boxCollider = this.AddComponent<BoxCollider2D>();
+
+        var boxCollider = this.AddComponent<BoxCollider2D>();
         boxCollider.isTrigger = true;
         boxCollider.includeLayers = LayerMask.GetMask("Default");
         boxCollider.layerOverridePriority = 1;
-
-
-    }
-
-    public void SetupFromCherryController(Waypoint wp, CherryController cherryController)
-    {
-        this.waypoint = wp;
-        this.cherryController = cherryController;
     }
 
 
@@ -46,9 +35,7 @@ public class ItemCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-             this.cherryController.OnItemHit(this);
+            emmitItemHitEvent.Invoke(this, other.gameObject);
         }
     }
-    
-
 }

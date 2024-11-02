@@ -182,19 +182,19 @@ public class MapRender : MonoBehaviour
 
         if ((top == 1 || top == 2 || top == 7) && (bottom == 1 || bottom == 2 || bottom == 7))
         {
-            if (left == 5 || left == 6)
+            if (left == 5 || left == 6 || left == 8 || left == 9)
                 return 4;
             // vertical wall
-            if (right == 5 || right == 6)
+            if (right == 5 || right == 6 || right == 8 || right == 9)
                 return 6;
             return -1;
         }
         else if ((left == 1 || left == 2 || left == 7) && (right == 1 || right == 2 || right == 7))
         {
             // horizontal wall
-            if (top == 5 || top == 6)
+            if (top == 5 || top == 6 || top == 8 || top == 9)
                 return 2;
-            if (bottom == 5 || bottom == 6)
+            if (bottom == 5 || bottom == 6 || bottom == 8 || bottom == 9)
                 return 8;
             return -2;
         }

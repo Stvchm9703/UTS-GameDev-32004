@@ -19,18 +19,19 @@ public class CherryController : MonoBehaviour
     [SerializeField] int maxPowerCount = 0;
     [SerializeField] GameObject cherryPrefab;
 
-    List<Waypoint> AvailableWaypoints, WalkableWaypoints;
-    List<ItemCollider> itemColliders;
+    List<Waypoint> AvailableWaypoints;
     GameObject levelGenGameObj;
+
     LevelGenerator levelGenerator;
-    MapRender mapRender;
+
+    // MapRender mapRender;
     Queue<IEnumerator> SpawnerQueue;
+
+    private List<ItemCollider> itemColliders => levelGenerator.itemColliders;
 
     void Start()
     {
         SpawnerQueue = new Queue<IEnumerator>();
-        itemColliders = new List<ItemCollider>();
-        WalkableWaypoints = new List<Waypoint>();
 
         InitItemColliders();
         StartCoroutine(ProcessSpawner());
@@ -42,51 +43,29 @@ public class CherryController : MonoBehaviour
         levelGenGameObj = GameObject.Find("Grid");
         levelGenerator = levelGenGameObj.GetComponent<LevelGenerator>();
 
-        mapRender = levelGenGameObj.GetComponent<MapRender>();
-        bool shouldManualMaxCount = maxPowerCount > 0;
-
-
-        if (levelGenerator != null)
+        if (levelGenerator != null && maxPowerCount <= 0)
         {
-            // AvailableWaypoints = levelGenerator.Waypoints.Where(wp => wp.IsWalkable()).ToList();
-            AvailableWaypoints = new List<Waypoint>();
-            WalkableWaypoints = levelGenerator.Waypoints.Where(wp => wp.IsWalkable()).ToList();
-            foreach (var wp in WalkableWaypoints)
-            {
-                CreateItemCollider(wp);
-                if (shouldManualMaxCount == false && wp.gridType == 6)
-                {
-                    maxPowerCount++;
-                }
-            }
-
-            this.isReady = true;
+            maxPowerCount = levelGenerator.Waypoints.Count(wp => wp.gridType == 6);
         }
+
+        this.isReady = true;
     }
 
-    GameObject CreateItemCollider(Waypoint wp, bool isCherry = false)
+    GameObject CreateCherry(Waypoint wp)
     {
         var itemCollider = new GameObject("wp");
-        if (isCherry)
-        {
-            itemCollider = Instantiate(cherryPrefab);
-            itemCollider.name = "wp-cherry";
-        }
-
-        itemCollider.transform.SetParent(levelGenGameObj.transform);
+        itemCollider.transform.SetParent(this.transform);
         itemCollider.transform.localPosition = wp.position;
+        itemCollider.transform.localScale = new Vector3(3, 3, 3);
+        
         var itmCol = itemCollider.AddComponent<ItemCollider>();
-        itmCol.SetupFromCherryController(wp, this);
-        if (isCherry)
-        {
-            itemCollider.transform.localScale = new Vector3(3, 3, 3);
-        }
-
+        // itmCol.SetupFromCherryController(wp, this);
+        itmCol.emmitItemHitEvent.AddListener(OnItemHitCherry);
         itemColliders.Add(itmCol);
         return itemCollider;
     }
 
-    public void OnItemHit(ItemCollider itemCollider)
+    public void OnItemHitCherry(ItemCollider itemCollider, GameObject hitted)
     {
         // Destory process
         this.AvailableWaypoints.Add(itemCollider.waypoint);
@@ -96,8 +75,7 @@ public class CherryController : MonoBehaviour
             this.SpawnerQueue.Enqueue(RespwanCherry());
         }
 
-        mapRender.RemoveItemTile(itemCollider.waypoint.x, itemCollider.waypoint.y);
-
+        levelGenerator.RemoveItemTile(itemCollider.waypoint);
         Destroy(itemCollider.gameObject);
     }
 
@@ -108,8 +86,7 @@ public class CherryController : MonoBehaviour
         int randomIndex = Random.Range(0, AvailableWaypoints.Count);
         var randomWp = AvailableWaypoints[randomIndex];
         randomWp.gridType = 8;
-        CreateItemCollider(randomWp, true);
-        // mapRender.AddItemTile(randomWp.x, randomWp.y, randomWp.gridType);
+        CreateCherry(randomWp);
         yield return null;
     }
 

@@ -4960,6 +4960,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.4
+  initialWaypoint:
+    x: 0
+    y: 0
+    position: {x: 0, y: 0, z: 0}
+    gridType: 0
   footstepSound: {fileID: 8300000, guid: 03533d9fe79924c9e86d0f69f0d035bf, type: 3}
   eatSound: {fileID: 8300000, guid: 5922c202265ef4d2789336ba00040579, type: 3}
   dieSound: {fileID: 0}
@@ -5085,13 +5090,13 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 87
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &8752800117553221262
 BoxCollider2D:
@@ -5127,7 +5132,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.09939265, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5137,5 +5142,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0

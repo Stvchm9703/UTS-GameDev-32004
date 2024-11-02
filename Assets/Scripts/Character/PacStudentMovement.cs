@@ -9,6 +9,7 @@ public class PacStudentMovement : MonoBehaviour
     public float speed = 2.4f;
 
     // public List<Transform> waypoints = new List<Transform>();
+    public Waypoint initialWaypoint;
     private Vector3 targetPosition;
 
     private Animator animator;
@@ -23,8 +24,11 @@ public class PacStudentMovement : MonoBehaviour
     private Vector3 basicScale,
         flipScale;
 
+    bool isPaused = true;
+
     public UnityEvent<GameObject> EmmitOnItemHit;
     public UnityEvent<GameObject> EmmitOnGhostHit;
+
     public bool Arrived()
     {
         var distance = Vector3.Distance(transform.position, targetPosition);
@@ -57,6 +61,7 @@ public class PacStudentMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isPaused) return;
         UpdateMove();
     }
 
@@ -95,14 +100,18 @@ public class PacStudentMovement : MonoBehaviour
     {
         targetPosition = wp.position;
     }
-    
+
     public void ResetPosition()
     {
         // transform.position = targetPosition;
+        targetPosition = initialWaypoint.position;
+        transform.position = initialWaypoint.position;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Debug.Log(other.name);
+        // Debug.Log(other.tag);
         if (other.CompareTag("ghost"))
         {
             EmmitOnGhostHit.Invoke(other.gameObject);
@@ -124,5 +133,10 @@ public class PacStudentMovement : MonoBehaviour
     public void DeadTarget()
     {
         audioSource.PlayOneShot(dieSound);
+    }
+    
+    public void SetPause(bool state)
+    {
+        isPaused = state;
     }
 }

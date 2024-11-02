@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528709562}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UISceneManager, Assembly-CSharp
         m_MethodName: LoadLevel
         m_Mode: 5
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528709562}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UISceneManager, Assembly-CSharp
         m_MethodName: LoadLevel
         m_Mode: 5
@@ -832,12 +832,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 528709558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440620296b76b4bab965a7348f124080, type: 3}
+  m_Script: {fileID: 11500000, guid: 19e0fde407c4a477b87b1753f71c3bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lastScore: 0
-  bestTime: 1234
+  bestTime: 
   scoreText: {fileID: 2110213761}
+  level1Button: {fileID: 121418410}
+  level2Button: {fileID: 47270588}
 --- !u!114 &528709562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,7 +849,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 528709558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b1c9216efab42118b0e00f3bc5aac9, type: 3}
+  m_Script: {fileID: 11500000, guid: 32131caa9d8dd45f396bba543f096392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startScene:
@@ -972,6 +974,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2851676914176488835, guid: 015ded77ab927474296d40386a817ef1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3359047025240046754, guid: 015ded77ab927474296d40386a817ef1, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -2054,6 +2060,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2273335323283886295, guid: 5c9191327135d4661b87b74500c63771, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939824509303235697, guid: 5c9191327135d4661b87b74500c63771, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

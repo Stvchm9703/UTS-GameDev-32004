@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 // using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.Windows;
@@ -34,12 +35,19 @@ public struct Waypoint
 
     public bool IsWalkable()
     {
-        return gridType == 5 || gridType == 6 || gridType == 0;
+        return gridType == 5 || gridType == 6 || gridType == 0 || gridType == 9;
     }
 
     public override string ToString()
     {
-        return string.Format("[{0}, {1}, {2}, {3}]", x, y, gridType, position.ToString());
+        return string.Format("wp@[({0} : {1}), {2}, {3}]", x, y, gridType, position.ToString());
+    }
+
+    public override bool Equals(object obj)
+    {
+        return obj is Waypoint waypoint &&
+               x == waypoint.x &&
+               y == waypoint.y;
     }
 }
 
@@ -72,13 +80,15 @@ public class LevelGenerator : MonoBehaviour
         { 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 }
     };
 
-    // private int[,] debugMap ;
-
     [SerializeField] public List<Waypoint> Waypoints { get; private set; }
-
-
+    [SerializeField] public List<Waypoint> GhostRespawnPoint { get; private set; }
     [SerializeField] private MapRender mapRender;
+    List<Waypoint> AvailableWaypoints;
+    public List<ItemCollider> itemColliders;
 
+    public UnityEvent<Waypoint, Waypoint> emmitOnTeleport = new UnityEvent<Waypoint, Waypoint>();
+    
+    [SerializeField] private GameObject teleportPrefab;
 
     // Start is called before the first frame update
     private void Awake()
@@ -92,6 +102,23 @@ public class LevelGenerator : MonoBehaviour
         // Debug.Log(waypoints);
         AdjustCamera(fullLevelMap);
         GenerateWaypoint(fullLevelMap);
+        // debugText(fullLevelMap);
+    }
+
+    void debugText(int[,] debugMap)
+    {
+        string debug = "";
+        var row = debugMap.GetLength(0);
+        var col = debugMap.GetLength(1);
+        for (int i = 0; i < row; i++)
+        {
+            for (int j = 0; j < debugMap.GetLength(1); j++)
+                debug += debugMap[i, j] + ",";
+
+            debug += "\n";
+        }
+
+        File.WriteAllBytes("Assets/StreamingAssets/map.txt", Encoding.UTF8.GetBytes(debug));
     }
 
 
@@ -101,6 +128,7 @@ public class LevelGenerator : MonoBehaviour
         var rows = originalMap.GetLength(0);
         var cols = originalMap.GetLength(1);
 
+        originalMap[rows - 1, 0] = 9;
         // Remove the bottom row for vertical mirroring
         // var trimmedRows = rows - 1;
 
@@ -129,21 +157,17 @@ public class LevelGenerator : MonoBehaviour
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < cols * 2; col++)
-            {
                 newArray[row, col] = fullMap[row, col];
-            }
         }
 
         // Copy rows after the middle row
         for (int i = rows + 1; i < rows * 2; i++)
         {
             for (int col = 0; col < cols * 2; col++)
-            {
                 newArray[i - 1, col] = fullMap[i, col];
-            }
         }
 
-        newArray[rows, 0] = 9;
+        // newArray[rows, 0] = 9;
 
         return newArray;
     }
@@ -200,9 +224,7 @@ public class LevelGenerator : MonoBehaviour
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < cols; col++)
-            {
                 line += map[row, col] + ",";
-            }
 
             line += "\n";
         }
@@ -232,6 +254,69 @@ public class LevelGenerator : MonoBehaviour
                 Waypoints.Add(waypoint);
             }
         }
+
+        var walkableWaypoints = Waypoints.Where(wp => wp.IsWalkable()).ToList();
+        foreach (var wp in walkableWaypoints)
+        {
+            CreateItemCollider(wp);
+        }
+        
+        // setup for ghost-respawn
+        GhostRespawnPoint = new List<Waypoint>();
+        var middleRow = fullMap.GetLength(0) / 2;
+        var middleCol = fullMap.GetLength(1) / 2;
+        GhostRespawnPoint.Add(
+             Waypoints.Find(wp => wp.x == middleRow && wp.y == middleCol - 1)
+        );
+        GhostRespawnPoint.Add(
+            Waypoints.Find(wp => wp.x == middleRow && wp.y == middleCol + 1)
+        );
+        GhostRespawnPoint.Add(
+            Waypoints.Find(wp => wp.x == middleRow - 1 && wp.y == middleCol)
+        );
+        GhostRespawnPoint.Add(
+            Waypoints.Find(wp => wp.x == middleRow + 1 && wp.y == middleCol)
+        );
+        
+    }
+
+    GameObject CreateItemCollider(Waypoint wp)
+    {
+        var itemCollider = new GameObject("wp");
+        itemCollider.transform.SetParent(this.transform);
+        itemCollider.transform.localPosition = wp.position;
+        
+        var itmCol = itemCollider.AddComponent<ItemCollider>();
+        // Debug.Log(itmCol.emmitItemHitEvent == null);
+        itmCol.waypoint = wp;
+        itmCol.emmitItemHitEvent.AddListener(OnItemHit);
+        itemColliders.Add(itmCol);
+
+        return itemCollider;
+    }
+
+
+    public void OnItemHit(ItemCollider itemCollider, GameObject hitted)
+    {
+        var hitWp = itemCollider.waypoint;
+        this.itemColliders.Remove(itemCollider);
+        if (hitWp.gridType == 9)
+        {
+            var otherTP = Waypoints.Find(wp => wp.gridType == 9 && wp.Equals(hitWp) == false);
+            // var player = hitted.GetComponent<PacStudentMovement>();
+            var neighborWp =
+                Waypoints.Find(wp => (wp.x == otherTP.x - 1 || wp.x == otherTP.x + 1) && (wp.y == otherTP.y));
+            emmitOnTeleport.Invoke(otherTP, neighborWp);
+            return;
+        }
+
+        mapRender.RemoveItemTile(hitWp.x, hitWp.y);
+        Destroy(itemCollider.gameObject);
+    }
+
+    public void RemoveItemTile(Waypoint wp)
+    {
+        mapRender.RemoveItemTile(wp.x, wp.y);
     }
 
     public Waypoint? TryGetWalkable(Waypoint currWp, Direction direction)
@@ -244,29 +329,20 @@ public class LevelGenerator : MonoBehaviour
             case Direction.Up:
                 // if (waypoints.Any(w => w.x == row && w.y == col-1) == false) return false;
                 targetWp = Waypoints.Find(w => w.x == currWp.x && w.y == currWp.y - 1);
-                if (targetWp == null) return null;
-                if (targetWp.Value.IsWalkable() == false) return null;
-                return targetWp;
-
+                break;
             case Direction.Down:
                 targetWp = Waypoints.Find(w => w.x == currWp.x && w.y == currWp.y + 1);
-                if (targetWp == null) return null;
-                if (targetWp?.IsWalkable() == false) return null;
-                return targetWp;
-
+                break;
             case Direction.Left:
                 targetWp = Waypoints.Find(w => w.x == currWp.x - 1 && w.y == currWp.y);
-                if (targetWp == null) return null;
-                if (targetWp?.IsWalkable() == false) return null;
-                return targetWp;
-
+                break;
             case Direction.Right:
                 targetWp = Waypoints.Find(w => w.x == currWp.x + 1 && w.y == currWp.y);
-                if (targetWp == null) return null;
-                if (targetWp?.IsWalkable() == false) return null;
-                return targetWp;
+                break;
         }
 
-        return null;
+        if (targetWp == null) return null;
+        if (targetWp?.IsWalkable() == false) return null;
+        return targetWp;
     }
 }

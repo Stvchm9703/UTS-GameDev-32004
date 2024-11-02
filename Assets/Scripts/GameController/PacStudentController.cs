@@ -29,6 +29,8 @@ public class PacStudentController : MonoBehaviour
     [SerializeField] private GameObject commandGameObject;
     private List<TextMeshProUGUI> commandTexts = new List<TextMeshProUGUI>();
 
+    bool pauseMovement = false;
+
     void Awake()
     {
         player = Instantiate(PlayerPrefab, currentWaypoint.position, Quaternion.identity);
@@ -44,10 +46,8 @@ public class PacStudentController : MonoBehaviour
         }
 
         currentWaypoint = levelGenerator.Waypoints.First(wp => wp.IsWalkable());
-        Debug.Log(currentWaypoint);
-        // Instantiate the Player
-
-        _pacStudentMovement.SetTargetPosition(currentWaypoint);
+        _pacStudentMovement.initialWaypoint = currentWaypoint;
+        _pacStudentMovement.ResetPosition();
         InitDebugCommand();
     }
 
@@ -131,6 +131,7 @@ public class PacStudentController : MonoBehaviour
         currentTime += Time.fixedDeltaTime;
         if (_pacStudentMovement.Arrived() == false) return;
         if (currentInput == null) return;
+        if (pauseMovement) return;
         var wp = levelGenerator.TryGetWalkable(currentWaypoint, currentInput.Value);
         if (wp != null)
         {
@@ -139,16 +140,42 @@ public class PacStudentController : MonoBehaviour
             currentWaypoint = wp.Value;
         }
     }
+    public void ResetPosition()
+    {
+        _pacStudentMovement.ResetPosition();
+        currentInput = null;
+        lastWaypoint = currentWaypoint;
+        currentWaypoint = _pacStudentMovement.initialWaypoint;
+        
+    }
+
+    public void SetParseState(bool state)
+    {
+        pauseMovement = state;
+        _pacStudentMovement.SetPause(state);
+    }
+
+    public IEnumerator Teleport(Waypoint wp, Waypoint neighbor)
+    {
+        pauseMovement = true;
+        lastWaypoint = wp;
+        player.transform.position = neighbor.position;
+        _pacStudentMovement.SetTargetPosition(neighbor);
+
+        currentWaypoint = neighbor;
+        yield return new WaitForSeconds(0.15f);
+        pauseMovement = false;
+    }
 
 
     void UpdateInput()
     {
         if (directionBuffer.Count >= 2)
         {
-            var lastcommand = directionBuffer[^1];
+            var lastCommand = directionBuffer[^1];
             var lastCommand2 = directionBuffer[^2];
-            var diff = lastcommand.Except(lastCommand2)
-                .Union(lastCommand2.Except(lastcommand)).ToList();
+            var diff = lastCommand.Except(lastCommand2)
+                .Union(lastCommand2.Except(lastCommand)).ToList();
             if (diff.Count != 0)
             {
                 lastInput = currentInput;

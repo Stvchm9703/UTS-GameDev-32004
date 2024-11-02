@@ -11,6 +11,7 @@ public class StartSceneManager : MonoBehaviour
     public string bestTime = "";
 
     [SerializeField] private Text scoreText;
+    [SerializeField] private Button level1Button, level2Button;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,9 @@ public class StartSceneManager : MonoBehaviour
         {
             scoreText.text = LastScoreFormat();
         }
+        if (level1Button) level1Button.onClick.AddListener(() => LoadLevel(1));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     string LastScoreFormat()
     {
@@ -35,6 +33,11 @@ public class StartSceneManager : MonoBehaviour
 
     void LoadBestRecord()
     {
-        
+        lastScore = PlayerPrefs.GetInt("HighScore", lastScore);
+        bestTime = PlayerPrefs.GetString("HighScoreTime", bestTime);
+    }
+    void LoadLevel(int level)
+    {
+        SceneManager.LoadScene("Level" + level);
     }
 }

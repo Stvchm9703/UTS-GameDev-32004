@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 1475713009810950375}
   - component: {fileID: 3969808131700443031}
   - component: {fileID: 4469816795187576550}
+  - component: {fileID: 8202171653098545093}
   - component: {fileID: 8871382837733478843}
   - component: {fileID: 91595434881658090}
   - component: {fileID: 8333259197170140730}
+  - component: {fileID: -5988731045024858785}
   m_Layer: 0
   m_Name: GhostBlue
   m_TagString: ghsot
@@ -31,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4343028660301612323}
@@ -101,7 +103,7 @@ Animator:
   m_GameObject: {fileID: 1254624325014455551}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c92360e0544b4a7da316cda0b884735, type: 2}
+  m_Controller: {fileID: 9100000, guid: afcc42879b0b54a96b2617581c9d92cc, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -113,6 +115,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &8202171653098545093
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254624325014455551}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &8871382837733478843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,6 +215,32 @@ MonoBehaviour:
   speed: 1
   waypoints: []
   currentWaypoint: 0
+  RespwanPoint:
+    x: 0
+    y: 0
+    position: {x: 0, y: 0, z: 0}
+    gridType: 0
+  state: 0
+  isPaused: 1
+--- !u!114 &-5988731045024858785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254624325014455551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91440171f199487984e1fb0f4917dab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleClip: {fileID: 7400000, guid: 37e8132478e974b5ea0ea34d6c416fba, type: 2}
+  scaredClip: {fileID: 7400000, guid: 8988a84f17422463ba9e9b897249c549, type: 2}
+  deadClip: {fileID: 7400000, guid: 3a5ee905e669146039556c8302e24017, type: 2}
+  walkClip: {fileID: 7400000, guid: 96cd3366e569945cfb9c1fef1d81e006, type: 2}
+  changeWalkToScaredClip: {fileID: 7400000, guid: 60f55f0ca4c9840559a537a6c269c8fc, type: 2}
+  changeScaredToDeadClip: {fileID: 7400000, guid: 0b396b1eabc9d42ea949c6646abd5788, type: 2}
+  changeDeadToReviveClip: {fileID: 7400000, guid: d9e4906cb0caa43aa902514d2da07659, type: 2}
   state: 0
 --- !u!1 &4107776347921642529
 GameObject:
