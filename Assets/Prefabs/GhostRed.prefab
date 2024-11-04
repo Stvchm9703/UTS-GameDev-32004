@@ -12,10 +12,8 @@ GameObject:
   - component: {fileID: 1046057856592116819}
   - component: {fileID: 8595560082192146380}
   - component: {fileID: 3206478488371699082}
-  - component: {fileID: 8752713935998473360}
   - component: {fileID: 2544127471073125779}
   - component: {fileID: 2281415992423311997}
-  - component: {fileID: 4197378996980017181}
   m_Layer: 0
   m_Name: GhostRed
   m_TagString: ghsot
@@ -159,20 +157,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.5, y: 3.5}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &8752713935998473360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283827130450531977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dea8e664654144189ce12801352e320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2544127471073125779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,8 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  waypoints: []
-  currentWaypoint: 0
+  TargetPoint:
+    x: 0
+    y: 0
+    position: {x: 0, y: 0, z: 0}
+    gridType: 0
   RespwanPoint:
     x: 0
     y: 0
@@ -195,6 +184,9 @@ MonoBehaviour:
     gridType: 0
   state: 0
   isPaused: 1
+  emmitOnAllRouteCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &2281415992423311997
 Rigidbody2D:
   serializedVersion: 4
@@ -222,26 +214,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4197378996980017181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283827130450531977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91440171f199487984e1fb0f4917dab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleClip: {fileID: 7400000, guid: 5a6f3fad00a1640e0a95c04dc3526675, type: 2}
-  scaredClip: {fileID: 7400000, guid: 358552f96cc244325a5d63f5429f6ee4, type: 2}
-  deadClip: {fileID: 7400000, guid: a06f27fefe0c44b15841e7afaade8e07, type: 2}
-  walkClip: {fileID: 7400000, guid: b7110a6f056de48a7af74f8e985f4bcd, type: 2}
-  changeWalkToScaredClip: {fileID: 7400000, guid: 679c93a7e5dc7407ebed33a933b8c833, type: 2}
-  changeScaredToDeadClip: {fileID: 7400000, guid: 07f39ec56b080464486a3927f4b0ebf6, type: 2}
-  changeDeadToReviveClip: {fileID: 7400000, guid: b3dc5fc013a5d40afae4726e727db84b, type: 2}
-  state: 0
 --- !u!1 &1216292948088986581
 GameObject:
   m_ObjectHideFlags: 0

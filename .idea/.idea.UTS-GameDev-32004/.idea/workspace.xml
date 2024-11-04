@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de70612a-3610-4f39-91a2-421157225452" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BGMController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BGMController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/GhostController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/GhostController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UTS-GameDev-32004/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UTS-GameDev-32004/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GhostBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GhostBlue.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GhostGreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GhostGreen.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GhostRed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GhostRed.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GhostYellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GhostYellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PacStudent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PacStudent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelGenerated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelGenerated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/EnemyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PacStudentMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PacStudentMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController/PacStudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController/PacStudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyCommonSetting.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyCommonSetting.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController/TestEnemyMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController/TestEnemyMovementController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameHUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameHUIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/CherryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/CherryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/ItemCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/ItemCollider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +42,27 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/83/3d7eb538/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/99/226d87d8/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/d1/3c7ec63c/Queue`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f322cea2ad9544dab76e80addb124cfa34400/7a/6ba0a1e7/Animator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fe680f0958d14fd3b4a22c5d9b6cac881cbe00/06/4204aa56/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fe680f0958d14fd3b4a22c5d9b6cac881cbe00/22/a9cbc83b/UnityEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fe680f0958d14fd3b4a22c5d9b6cac881cbe00/35/bf1b1581/Vector2Int.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fe680f0958d14fd3b4a22c5d9b6cac881cbe00/b6/7b2a8894/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fe680f0958d14fd3b4a22c5d9b6cac881cbe00/f3/1136af44/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@10.1.1/Editor/SkinningModule/SkinningModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.psdimporter@9.0.2/Editor/Tasks/ExtractLayerTask.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/Interface/IEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/ShapeEditor/ShapeEditorRectSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteEditorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteUtilityWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.8.7/Samples~/Customization/Video/VideoPlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Editor/TMP/TMP_SDFShaderGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Editor/TMP/TMPro_CreateObjectMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Runtime/TMP/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Tests/Editor/TMP/FontEngineTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Tests/Editor/UGUI/CanvasRenderer/ChangingHierarchyOfCanvasRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Tests/Editor/UGUI/WrapperWindowFixture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Tests/Runtime/UGUI/Layout/LayoutGroupScaling.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Framework/Events/Physics/OnControllerColliderHit.cs" root0="SKIP_HIGHLIGHTING" />
@@ -132,6 +144,8 @@
       <workItem from="1730141252485" duration="14055000" />
       <workItem from="1730187016958" duration="6271000" />
       <workItem from="1730451176650" duration="3921000" />
+      <workItem from="1730465518830" duration="73676000" />
+      <workItem from="1730643617519" duration="35764000" />
     </task>
     <task id="LOCAL-00001" summary="regenerate .idea file">
       <option name="closed" value="true" />
@@ -141,7 +155,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730141289955</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="snap">
+      <option name="closed" value="true" />
+      <created>1730467016232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730467016232</updated>
+    </task>
+    <task id="LOCAL-00003" summary="snap, for 80%-D">
+      <option name="closed" value="true" />
+      <created>1730573987218</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730573987218</updated>
+    </task>
+    <task id="LOCAL-00004" summary="snap, for additional file">
+      <option name="closed" value="true" />
+      <created>1730574021357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730574021357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +196,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="regenerate .idea file" />
-    <option name="LAST_COMMIT_MESSAGE" value="regenerate .idea file" />
+    <MESSAGE value="snap" />
+    <MESSAGE value="snap, for 80%-D" />
+    <MESSAGE value="snap, for additional file" />
+    <option name="LAST_COMMIT_MESSAGE" value="snap, for additional file" />
   </component>
 </project>

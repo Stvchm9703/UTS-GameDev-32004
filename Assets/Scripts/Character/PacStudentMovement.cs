@@ -9,7 +9,7 @@ public class PacStudentMovement : MonoBehaviour
     public float speed = 2.4f;
 
     // public List<Transform> waypoints = new List<Transform>();
-    public Waypoint initialWaypoint;
+    public Waypoint initialWaypoint, targetWaypoint;
     private Vector3 targetPosition;
 
     private Animator animator;
@@ -98,11 +98,13 @@ public class PacStudentMovement : MonoBehaviour
 
     public void SetTargetPosition(Waypoint wp)
     {
+        targetWaypoint = wp;
         targetPosition = wp.position;
     }
 
     public void ResetPosition()
     {
+        targetWaypoint = initialWaypoint;
         // transform.position = targetPosition;
         targetPosition = initialWaypoint.position;
         transform.position = initialWaypoint.position;

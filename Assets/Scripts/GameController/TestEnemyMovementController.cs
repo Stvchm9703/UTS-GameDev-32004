@@ -31,28 +31,28 @@ public class TestEnemyMovementController : MonoBehaviour
         var gGreen = Instantiate(GhostGreenPrefab, new Vector3(0, 0, -1), Quaternion.identity);
         var gBlue = Instantiate(GhostBluePrefab, new Vector3(0, 0, -1), Quaternion.identity);
         // Set the waypoints for the Ghosts
-        Transform[] waypointsList = waypoints.GetComponentsInChildren<Transform>();
-
-
-        foreach (var waypoint in waypointsList)
-        {
-            if (waypoint.tag == "waypoint-red")
-            {
-                gRed.GetComponent<EnemyMovement>().waypoints.Add(waypoint);
-            }
-            if (waypoint.tag == "waypoint-yellow")
-            {
-                gYellow.GetComponent<EnemyMovement>().waypoints.Add(waypoint);
-            }
-            if (waypoint.tag == "waypoint-green")
-            {
-                gGreen.GetComponent<EnemyMovement>().waypoints.Add(waypoint);
-            }
-            if (waypoint.tag == "waypoint-blue")
-            {
-                gBlue.GetComponent<EnemyMovement>().waypoints.Add(waypoint);
-            }
-        }
+        // Transform[] waypointsList = waypoints.GetComponentsInChildren<Transform>();
+        //
+        //
+        // foreach (var waypoint in waypointsList)
+        // {
+        //     if (waypoint.tag == "waypoint-red")
+        //     {
+        //         gRed.GetComponent<EnemyMovement>().normalRoute.Add(waypoint);
+        //     }
+        //     if (waypoint.tag == "waypoint-yellow")
+        //     {
+        //         gYellow.GetComponent<EnemyMovement>().normalRoute.Add(waypoint);
+        //     }
+        //     if (waypoint.tag == "waypoint-green")
+        //     {
+        //         gGreen.GetComponent<EnemyMovement>().normalRoute.Add(waypoint);
+        //     }
+        //     if (waypoint.tag == "waypoint-blue")
+        //     {
+        //         gBlue.GetComponent<EnemyMovement>().normalRoute.Add(waypoint);
+        //     }
+        // }
 
     }
 }

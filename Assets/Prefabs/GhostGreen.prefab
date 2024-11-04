@@ -250,10 +250,8 @@ GameObject:
   - component: {fileID: 4827865726812476577}
   - component: {fileID: 7215942180651810628}
   - component: {fileID: 4500051359953189485}
-  - component: {fileID: 4660309493484925387}
   - component: {fileID: 8208841095942800441}
   - component: {fileID: 7767527457386504911}
-  - component: {fileID: 277852787998034899}
   m_Layer: 0
   m_Name: GhostGreen
   m_TagString: ghsot
@@ -397,20 +395,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.5, y: 3.5}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &4660309493484925387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8286869767641421009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dea8e664654144189ce12801352e320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8208841095942800441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,8 +410,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  waypoints: []
-  currentWaypoint: 0
+  TargetPoint:
+    x: 0
+    y: 0
+    position: {x: 0, y: 0, z: 0}
+    gridType: 0
   RespwanPoint:
     x: 0
     y: 0
@@ -433,6 +422,9 @@ MonoBehaviour:
     gridType: 0
   state: 0
   isPaused: 1
+  emmitOnAllRouteCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &7767527457386504911
 Rigidbody2D:
   serializedVersion: 4
@@ -460,23 +452,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &277852787998034899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8286869767641421009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91440171f199487984e1fb0f4917dab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleClip: {fileID: 7400000, guid: a4a3fc4b55e034532a7f9a3d64753feb, type: 2}
-  scaredClip: {fileID: 7400000, guid: b695c551c91ef4cedaaf64c7252d67c0, type: 2}
-  deadClip: {fileID: 7400000, guid: b9aab7e3b69134c7896950596d4e9707, type: 2}
-  walkClip: {fileID: 7400000, guid: 0a91241d24443426ea73f780f0790981, type: 2}
-  changeWalkToScaredClip: {fileID: 7400000, guid: 5ca34cdd88645449596d69afd951da06, type: 2}
-  changeScaredToDeadClip: {fileID: 7400000, guid: 2651e36bc664b45a987210e91af4b44e, type: 2}
-  changeDeadToReviveClip: {fileID: 7400000, guid: ed36190fdb47741d5860bcbfc0b855bc, type: 2}
-  state: 0

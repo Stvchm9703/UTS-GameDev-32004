@@ -1,15 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public enum EnemyState
 {
     Idle,
     Normal,
     Scared,
-    Dead, 
+    Dead,
     Revive,
 }
 
@@ -17,12 +20,12 @@ public class EnemyMovement : MonoBehaviour
 {
     public float speed = 1.0f;
 
-    public List<Transform> waypoints = new List<Transform>();
-    [SerializeField] private int currentWaypoint = 0;
+    [HideInInspector] public Queue<Waypoint> CurrentRoute = new Queue<Waypoint>();
 
-    public Waypoint RespwanPoint;
+    [HideInInspector] public Waypoint TargetPoint, RespwanPoint;
 
     private Animator animator;
+
     // private EnemyAnimationStateController enemyAnimationStateController;
     private Tweener tweener;
 
@@ -35,15 +38,18 @@ public class EnemyMovement : MonoBehaviour
     PacStudentMovement pacStudentMovement;
 
 
+    [HideInInspector] public UnityEvent emmitOnAllRouteCompleted = new UnityEvent();
+
+    [HideInInspector]
+    public UnityEvent<EnemyState, EnemyState> emmitOnChangeState = new UnityEvent<EnemyState, EnemyState>();
+
+    [HideInInspector] public UnityEvent emmitOnBackToRespawn = new UnityEvent();
+
+
     public bool Arrived()
     {
-        if (waypoints.Count == 0)
-        {
-            return false;
-        }
-
-        var distance = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
-        return distance < 0.05f;
+        var distance = Vector3.Distance(transform.position, TargetPoint.position);
+        return distance < 0.01f;
     }
 
     void Start()
@@ -67,7 +73,6 @@ public class EnemyMovement : MonoBehaviour
             transform.localScale.z
         );
         ChangeState(EnemyState.Normal);
-        
     }
 
     // Update is called once per frame
@@ -77,23 +82,41 @@ public class EnemyMovement : MonoBehaviour
         UpdateMove();
     }
 
-    public virtual void UpdateMove()
+    void UpdateMove()
     {
         if (Arrived())
         {
-            StartCoroutine(Wait(1.0f));
-            currentWaypoint++;
-            if (currentWaypoint >= waypoints.Count)
+            Debug.Log(this.gameObject.name + " Arrived CurrentRoute.Count: " + CurrentRoute.Count);
+            if (CurrentRoute.Count == 0)
             {
-                currentWaypoint = 0;
+                Debug.Log("Arrived at destination");
+                emmitOnAllRouteCompleted.Invoke();
+                if (TargetPoint == RespwanPoint)
+                {
+                    emmitOnBackToRespawn.Invoke();
+                }
+                return;
             }
+
+            TargetPoint = CurrentRoute.Dequeue();
         }
         else
         {
-            if (waypoints.Count == 0)
-                return;
-            MoveToWaypoint(waypoints[currentWaypoint]);
+            MoveToWaypoint(TargetPoint);
         }
+    }
+
+    public void SetRoute(List<Waypoint> route, bool force = false)
+    {
+        if ((CurrentRoute.Count == 0 || force) == false)
+        {
+            return;
+        }
+
+        CurrentRoute.Clear();
+        route.Reverse();
+        CurrentRoute = new Queue<Waypoint>(route);
+        TargetPoint = CurrentRoute.Dequeue();
     }
 
     IEnumerator Wait(float time)
@@ -103,7 +126,7 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForSeconds(time);
     }
 
-    void MoveToWaypoint(Transform waypoint)
+    void MoveToWaypoint(Waypoint waypoint)
     {
         tweener.AddTween(transform, transform.position, waypoint.position, Time.time, speed);
         if (transform.position.x < waypoint.position.x)
@@ -114,8 +137,7 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.localScale = flipScale;
         }
-
-        ChangeState(EnemyState.Normal);
+        // ChangeState(EnemyState.Normal);
     }
 
     public void ChangeState(EnemyState newState)
@@ -124,29 +146,29 @@ public class EnemyMovement : MonoBehaviour
         switch (newState)
         {
             case EnemyState.Idle:
-                // animator.Play("Idle");
                 animator.SetTrigger("Idle");
                 break;
             case EnemyState.Normal:
                 animator.SetTrigger("Normal");
-                // animator.Play("Walk");
                 break;
             case EnemyState.Scared:
                 animator.SetTrigger("Scare");
-                // animator.Play("Scare");
                 break;
             case EnemyState.Dead:
                 animator.SetTrigger("Dead");
-                // animator.Play("Dead");
                 break;
         }
-        state = newState;
 
+        emmitOnChangeState.Invoke(state, newState);
+        state = newState;
     }
 
     public void ResetPosition()
     {
+        CurrentRoute.Clear();
+        TargetPoint = RespwanPoint;
         this.transform.position = RespwanPoint.position;
+        emmitOnAllRouteCompleted.Invoke();
     }
 
 
@@ -157,10 +179,10 @@ public class EnemyMovement : MonoBehaviour
             pacStudentMovement.EmmitOnGhostHit.Invoke(this.gameObject);
         }
     }
-    
+
     public void SetPause(bool state)
     {
+        // Debug.Log(this.gameObject.name + " set pause " + state);
         isPaused = state;
     }
-    
 }

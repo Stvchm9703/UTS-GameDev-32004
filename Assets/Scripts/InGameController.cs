@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -11,37 +12,39 @@ public class InGameController : MonoBehaviour
 {
     [SerializeField] private InGameHUIManager inGameHUIManager;
     [SerializeField] private PacStudentController pacStudentController;
-    [SerializeField] private PacStudentMovement pacStudentMovement;
+    [HideInInspector] public PacStudentMovement pacStudentMovement;
     [SerializeField] private BGMController bgmController;
-    [SerializeField] private LevelGenerator levelGenerator;
+    [SerializeField] public LevelGenerator levelGenerator;
+    [SerializeField] private GhostController ghostController;
 
     // game state value
     [SerializeField] private int PowerPelletScore = 50, PelletScore = 10, CherryScore = 100, ScaredGhostScore = 300;
     [SerializeField] private int ScareTimeSecond = 10;
-    private float survivalTime = 0, ghostTimer = 0;
-
-    [SerializeField] private int score = 0, highScore = 0, life = 3;
-
-    [SerializeField] private bool InScareState = false;
-
-    [SerializeField] private bool ReadyState = true, GameOverState = false;
+    float survivalTime = 0, ghostTimer = 0;
+    int score = 0, highScore = 0, life = 3;
+    public bool InScareState = false;
+    bool ReadyState = true, GameOverState = false;
 
     [SerializeField] private GameObject GhostBluePrefab, GhostGreenPrefab, GhostRedPrefab, GhostYellowPrefab;
-    private GameObject GhostBlueInst, GhostGreenInst, GhostRedInst, GhostYellowInst;
-    private EnemyMovement emBlue, emGreen, emRed, emYellow;
+    [HideInInspector] public GameObject GhostBlueInst, GhostGreenInst, GhostRedInst, GhostYellowInst;
+    [HideInInspector] public EnemyMovement emBlue, emGreen, emRed, emYellow;
     // [SerializeField] private GameObject GhostBlueLabel, GhostGreenLable, GhostRedLable, GhostYellowLable;
 
     [SerializeField] private Transform mapTransform;
 
     Coroutine scareTimerCoroutine;
 
+    [HideInInspector] public UnityEvent<bool, bool> EmmitOnScareStateChange = new UnityEvent<bool, bool>();
+    [HideInInspector] public UnityEvent<bool, bool> EmmitOnReadyStateChange = new UnityEvent<bool, bool>();
+
     void Start()
     {
-        OnGhostInit();
-        OnPacStudentInit();
-        OnExitGameButtonInit();
+        InitGhostInstance();
+        InitPacStudent();
+        InitExitGameButton();
         ResetGame();
         StartCoroutine(StartCountdown());
+        InitGhostController();
         LoadHighScore();
     }
 
@@ -64,7 +67,7 @@ public class InGameController : MonoBehaviour
         yield return null;
     }
 
-    private void OnPacStudentInit()
+    private void InitPacStudent()
     {
         var student = GameObject.FindWithTag("Player");
         pacStudentMovement = student.GetComponent<PacStudentMovement>();
@@ -80,27 +83,27 @@ public class InGameController : MonoBehaviour
         if (levelGenerator)
         {
             levelGenerator.emmitOnTeleport.AddListener((Waypoint wp1, Waypoint wp2) =>
-                StartCoroutine(
-                    pacStudentController.Teleport(wp1, wp2)
-                )
+                StartCoroutine(pacStudentController.Teleport(wp1, wp2))
             );
-            if (levelGenerator.GhostRespawnPoint.Count > 0)
-            {
-                emBlue.RespwanPoint = levelGenerator.GhostRespawnPoint[0];
-                emGreen.RespwanPoint = levelGenerator.GhostRespawnPoint[1];
-                emRed.RespwanPoint = levelGenerator.GhostRespawnPoint[2];
-                emYellow.RespwanPoint = levelGenerator.GhostRespawnPoint[3];
-            }
+
+            emBlue.RespwanPoint = levelGenerator.GhostRespawnPoint[0];
+            emBlue.TargetPoint = levelGenerator.GhostRespawnPoint[0];
+            emGreen.RespwanPoint = levelGenerator.GhostRespawnPoint[1];
+            emGreen.TargetPoint = levelGenerator.GhostRespawnPoint[1];
+            emRed.RespwanPoint = levelGenerator.GhostRespawnPoint[2];
+            emRed.TargetPoint = levelGenerator.GhostRespawnPoint[2];
+            emYellow.RespwanPoint = levelGenerator.GhostRespawnPoint[3];
+            emYellow.TargetPoint = levelGenerator.GhostRespawnPoint[3];
         }
 
         pacStudentController.SetParseState(true);
     }
 
-    private void OnGhostInit()
+    private void InitGhostInstance()
     {
         if (GhostBluePrefab != null)
         {
-            GhostBlueInst = Instantiate(GhostBluePrefab, Vector3.zero, Quaternion.identity, mapTransform);
+            GhostBlueInst = Instantiate(GhostBluePrefab, mapTransform);
             GhostBlueInst.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
             emBlue = GhostBlueInst.GetComponent<EnemyMovement>();
         }
@@ -127,6 +130,12 @@ public class InGameController : MonoBehaviour
         }
     }
 
+    void InitGhostController()
+    {
+        ghostController = GetComponent<GhostController>();
+        ghostController.Init();
+    }
+
     void OnItemHit(GameObject item)
     {
         var itemCollider = item.GetComponent<ItemCollider>();
@@ -150,8 +159,6 @@ public class InGameController : MonoBehaviour
 
     void OnGhostHit(GameObject ghost)
     {
-        Debug.Log("onGhostHit");
-        Debug.Log(ghost);
         EnemyMovement tmp = null;
         if (ghost == this.GhostBlueInst) tmp = emBlue;
         if (ghost == this.GhostGreenInst) tmp = emGreen;
@@ -171,13 +178,10 @@ public class InGameController : MonoBehaviour
 
     void UpdateGhostState(bool state)
     {
+        var lastState = this.InScareState;
         this.InScareState = state;
         if (state)
         {
-            emBlue.ChangeState(EnemyState.Scared);
-            emGreen.ChangeState(EnemyState.Scared);
-            emRed.ChangeState(EnemyState.Scared);
-            emYellow.ChangeState(EnemyState.Scared);
             bgmController.PlayScared();
 
             inGameHUIManager.ToggleScareTime(true);
@@ -185,20 +189,17 @@ public class InGameController : MonoBehaviour
         }
         else
         {
-            Debug.Log("scare timer end");
             if (scareTimerCoroutine != null)
             {
                 StopCoroutine(scareTimerCoroutine);
                 scareTimerCoroutine = null;
             }
 
-            emBlue.ChangeState(EnemyState.Normal);
-            emGreen.ChangeState(EnemyState.Normal);
-            emRed.ChangeState(EnemyState.Normal);
-            emYellow.ChangeState(EnemyState.Normal);
             inGameHUIManager.ToggleScareTime(false);
             bgmController.PlayNormal();
         }
+
+        EmmitOnScareStateChange.Invoke(lastState, state);
     }
 
 
@@ -234,7 +235,7 @@ public class InGameController : MonoBehaviour
 
     [SerializeField] private Button exitGameButton;
 
-    void OnExitGameButtonInit()
+    void InitExitGameButton()
     {
         exitGameButton = GameObject.Find("ExitButton").GetComponent<Button>();
         exitGameButton.onClick.AddListener(OnExitGameClick);
@@ -269,13 +270,12 @@ public class InGameController : MonoBehaviour
 
     void SetPauseState(bool state)
     {
+        var lastState = this.ReadyState;
         this.ReadyState = state;
         // pacStudentMovement.PauseMovement = true;
         pacStudentController.SetParseState(state);
-        emBlue.SetPause(state);
-        emGreen.SetPause(state);
-        emRed.SetPause(state);
-        emYellow.SetPause(state);
+
+        EmmitOnReadyStateChange.Invoke(lastState, state);
     }
 
     void LoadHighScore()

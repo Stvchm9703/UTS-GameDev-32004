@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 959432836}
   - component: {fileID: 959432835}
   - component: {fileID: 959432837}
+  - component: {fileID: 959432838}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -499,23 +500,32 @@ MonoBehaviour:
   pacStudentController: {fileID: 959432836}
   pacStudentMovement: {fileID: 0}
   bgmController: {fileID: 1654618417}
-  levelGenerator: {fileID: 0}
+  levelGenerator: {fileID: 1563279259}
+  ghostController: {fileID: 0}
   PowerPelletScore: 50
   PelletScore: 10
   CherryScore: 100
   ScaredGhostScore: 300
   ScareTimeSecond: 10
-  score: 0
-  highScore: 0
-  life: 3
-  InScareState: 0
-  ReadyState: 0
-  GameOverState: 0
   GhostBluePrefab: {fileID: 1254624325014455551, guid: 81618d2c242a948529f492952a92a964, type: 3}
   GhostGreenPrefab: {fileID: 8286869767641421009, guid: 02185512bd16d4b708204b16e831e375, type: 3}
   GhostRedPrefab: {fileID: 283827130450531977, guid: 5c9191327135d4661b87b74500c63771, type: 3}
   GhostYellowPrefab: {fileID: 8625353643602280776, guid: 015ded77ab927474296d40386a817ef1, type: 3}
+  GhostBlueInst: {fileID: 0}
+  GhostGreenInst: {fileID: 0}
+  GhostRedInst: {fileID: 0}
+  GhostYellowInst: {fileID: 0}
+  emBlue: {fileID: 0}
+  emGreen: {fileID: 0}
+  emRed: {fileID: 0}
+  emYellow: {fileID: 0}
   mapTransform: {fileID: 1563279258}
+  EmmitOnScareStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+  EmmitOnReadyStateChange:
+    m_PersistentCalls:
+      m_Calls: []
   exitGameButton: {fileID: 0}
 --- !u!114 &959432835
 MonoBehaviour:
@@ -566,6 +576,19 @@ MonoBehaviour:
     m_Handle: 0
   tweenDuration: 0.5
   loadingScreenPrefab: {fileID: 1321994192635794087, guid: 237a8960e39174a34b061248c03afe5b, type: 3}
+--- !u!114 &959432838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959432832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a027903eac4a399a94d568d83e0896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugSprite: {fileID: -6601691336363857274, guid: f2b6ec339e0184041bd27ac3cc1070e6, type: 3}
 --- !u!1 &968315845
 GameObject:
   m_ObjectHideFlags: 0

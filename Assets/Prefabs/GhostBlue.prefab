@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 4469816795187576550}
   - component: {fileID: 8202171653098545093}
   - component: {fileID: 8871382837733478843}
-  - component: {fileID: 91595434881658090}
   - component: {fileID: 8333259197170140730}
-  - component: {fileID: -5988731045024858785}
   m_Layer: 0
   m_Name: GhostBlue
   m_TagString: ghsot
@@ -186,20 +184,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.5, y: 3.5}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &91595434881658090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254624325014455551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dea8e664654144189ce12801352e320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8333259197170140730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +199,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  waypoints: []
-  currentWaypoint: 0
+  TargetPoint:
+    x: 0
+    y: 0
+    position: {x: 0, y: 0, z: 0}
+    gridType: 0
   RespwanPoint:
     x: 0
     y: 0
@@ -222,26 +211,9 @@ MonoBehaviour:
     gridType: 0
   state: 0
   isPaused: 1
---- !u!114 &-5988731045024858785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254624325014455551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91440171f199487984e1fb0f4917dab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleClip: {fileID: 7400000, guid: 37e8132478e974b5ea0ea34d6c416fba, type: 2}
-  scaredClip: {fileID: 7400000, guid: 8988a84f17422463ba9e9b897249c549, type: 2}
-  deadClip: {fileID: 7400000, guid: 3a5ee905e669146039556c8302e24017, type: 2}
-  walkClip: {fileID: 7400000, guid: 96cd3366e569945cfb9c1fef1d81e006, type: 2}
-  changeWalkToScaredClip: {fileID: 7400000, guid: 60f55f0ca4c9840559a537a6c269c8fc, type: 2}
-  changeScaredToDeadClip: {fileID: 7400000, guid: 0b396b1eabc9d42ea949c6646abd5788, type: 2}
-  changeDeadToReviveClip: {fileID: 7400000, guid: d9e4906cb0caa43aa902514d2da07659, type: 2}
-  state: 0
+  emmitOnAllRouteCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4107776347921642529
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,12 +4,14 @@ using System.Collections.Generic;
 // using System.Text.Json;
 using System.Linq;
 using System.Text;
+using UnityEditor.Experimental.GraphView;
 // using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.Windows;
+using Object = System.Object;
 
 //
 [Serializable]
@@ -49,7 +51,23 @@ public struct Waypoint
                x == waypoint.x &&
                y == waypoint.y;
     }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(x, y);
+    }
+
+    public static bool operator ==(Waypoint a, Waypoint b)
+    {
+        return a.Equals(b);
+    }
+
+    public static bool operator !=(Waypoint a, Waypoint b)
+    {
+        return !a.Equals(b);
+    }
 }
+
 
 public enum Direction
 {
@@ -80,26 +98,40 @@ public class LevelGenerator : MonoBehaviour
         { 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0 }
     };
 
-    [SerializeField] public List<Waypoint> Waypoints { get; private set; }
-    [SerializeField] public List<Waypoint> GhostRespawnPoint { get; private set; }
+    [HideInInspector] public List<Waypoint> Waypoints { get; private set; }
+    [HideInInspector] public List<Waypoint> GhostRespawnPoint { get; private set; }
+    [HideInInspector] public List<Waypoint> OutterRoutePoint { get; private set; }
     [SerializeField] private MapRender mapRender;
-    List<Waypoint> AvailableWaypoints;
-    public List<ItemCollider> itemColliders;
 
-    public UnityEvent<Waypoint, Waypoint> emmitOnTeleport = new UnityEvent<Waypoint, Waypoint>();
-    
+    /// <summary>
+    /// Available waypoints for the ghost to move
+    /// </summary>
+    public List<Waypoint> AvailableWaypoints
+    {
+        get { return Waypoints.Where(wp => wp.gridType == 5 || wp.gridType == 6).ToList(); }
+    }
+
+
+    [HideInInspector] public List<ItemCollider> itemColliders;
+    [HideInInspector] public UnityEvent<Waypoint, Waypoint> emmitOnTeleport = new UnityEvent<Waypoint, Waypoint>();
+
     [SerializeField] private GameObject teleportPrefab;
+    private int[,] fullLevelMap;
+    public int GridRows => fullLevelMap.GetLength(0);
+    public int GridCols => fullLevelMap.GetLength(1);
 
     // Start is called before the first frame update
     private void Awake()
     {
         Waypoints = new List<Waypoint>();
-        var fullLevelMap = GenerateFullMap(levelMap);
+        fullLevelMap = GenerateFullMap(levelMap);
         // PrintMap(fullLevelMap); // Optional: For Debugging
 
         if (mapRender != null) mapRender.RenderMap(fullLevelMap);
 
-        // Debug.Log(waypoints);
+        Debug.Log("LevelGenerator Awake");
+        Debug.Log($"{GridRows} {GridCols}");
+
         AdjustCamera(fullLevelMap);
         GenerateWaypoint(fullLevelMap);
         // debugText(fullLevelMap);
@@ -173,13 +205,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
     // Function to copy a section of one map into another at a specified location
-    private void CopyMapSection(
-        int[,] source,
-        int[,] destination,
-        int destRow,
-        int destCol,
-        int numRows,
-        int numCols
+    private void CopyMapSection(int[,] source, int[,] destination, int destRow, int destCol, int numRows, int numCols
     )
     {
         for (var row = 0; row < numRows; row++)
@@ -260,13 +286,13 @@ public class LevelGenerator : MonoBehaviour
         {
             CreateItemCollider(wp);
         }
-        
+
         // setup for ghost-respawn
         GhostRespawnPoint = new List<Waypoint>();
         var middleRow = fullMap.GetLength(0) / 2;
         var middleCol = fullMap.GetLength(1) / 2;
         GhostRespawnPoint.Add(
-             Waypoints.Find(wp => wp.x == middleRow && wp.y == middleCol - 1)
+            Waypoints.Find(wp => wp.x == middleRow && wp.y == middleCol - 1)
         );
         GhostRespawnPoint.Add(
             Waypoints.Find(wp => wp.x == middleRow && wp.y == middleCol + 1)
@@ -277,7 +303,6 @@ public class LevelGenerator : MonoBehaviour
         GhostRespawnPoint.Add(
             Waypoints.Find(wp => wp.x == middleRow + 1 && wp.y == middleCol)
         );
-        
     }
 
     GameObject CreateItemCollider(Waypoint wp)
@@ -285,7 +310,7 @@ public class LevelGenerator : MonoBehaviour
         var itemCollider = new GameObject("wp");
         itemCollider.transform.SetParent(this.transform);
         itemCollider.transform.localPosition = wp.position;
-        
+
         var itmCol = itemCollider.AddComponent<ItemCollider>();
         // Debug.Log(itmCol.emmitItemHitEvent == null);
         itmCol.waypoint = wp;
