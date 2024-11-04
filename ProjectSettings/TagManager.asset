@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - waypoint-yellow
+  - waypoint-red
+  - waypoint-green
+  - waypoint-blue
+  - ghost
+  - item
   layers:
   - Default
   - TransparentFX
@@ -11,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - TileMap
   - 
   - 
   - 
@@ -40,4 +46,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: wall layer
+    uniqueID: 332180407
+    locked: 0
+  - name: floor layer
+    uniqueID: 3478068293
+    locked: 0
+  - name: item layer
+    uniqueID: 3599981953
+    locked: 0
+  - name: HUI layer
+    uniqueID: 839747391
+    locked: 0
+  - name: character layer
+    uniqueID: 1542384083
     locked: 0
